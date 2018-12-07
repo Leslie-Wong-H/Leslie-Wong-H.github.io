@@ -37,22 +37,33 @@
 
 </head>
 
-<body>
-  <div id="container" q-class="show:isCtnShow">
+<!-- <body style="background: url(https://i.loli.net/2018/12/07/5c0a574f40d67.jpg) 0% 0% / cover;background-attachment:fixed"> -->
+  <body>
+  <div id="container" q-class="show:isCtnShow" >
+      <div style="
+    background: url(https://i.loli.net/2018/12/07/5c0a574f40d67.jpg) 0% 0% / cover;
+    background-attachment:scroll;
+    width: 100%;
+    height: 100%;
+    z-index: -999;
+    position: fixed;
+"> </div>
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4D4D4D"></div>
+<div class="overlay" style="background: #ffffff url(https://i.loli.net/2018/12/07/5c0a0cf6a3384.jpg);background-size:cover"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
 			<img src="/img/avatar.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">爱冒泡的马树菌</a></h1>
+		  <h1 class="header-author"><a href="/"><b>爱冒泡的马树菌</b></a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">痴迷赛博朋克的新手村代码玩家一枚</p>
+		<nav class="header-subtitle-nav">
+			<img class="header-subtitle" src="https://api.gushi.ci/all.png">
+		</nav>
 		
 
 		<nav class="header-menu">
@@ -101,11 +112,12 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4D4D4D"></div>
+  		<div class="overlay js-overlay" style="background: #ffffff url(https://i.loli.net/2018/12/07/5c0a0cf6a3384.jpg)"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
-	<div class="intrude-less">
+
+	<div class="intrude-less"style="background: #ffffff url(https://i.loli.net/2018/12/07/5c0a0cf6a3384.jpg)">
 		<header id="header" class="inner">
 			<div class="profilepic">
 				<img src="/img/avatar.png" class="js-avatar">
@@ -114,7 +126,9 @@
 			  <h1 class="header-author js-header-author">爱冒泡的马树菌</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>痴迷赛博朋克的新手村代码玩家一枚<i class="icon icon-quo-right"></i></p>
+				<nav class="header-subtitle-nav">
+					<img class="header-subtitle" src="https://api.gushi.ci/all.png">
+				</nav>
 			
 			
 			
@@ -616,15 +630,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">建站</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
