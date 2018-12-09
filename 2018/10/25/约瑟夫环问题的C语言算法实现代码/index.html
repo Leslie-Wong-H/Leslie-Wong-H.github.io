@@ -6,25 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://lesliewong.cn">
-  <title>约瑟夫环问题的C语言算法实现 | 马树菌的博客小站</title>
+  <title>约瑟夫环问题的C语言算法实现 | 马树菌的博客驿站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="约瑟夫(Joseph)问题的一种描述是：编号为 1，2，⋯ ⋯ n 的 n 个人按顺时针方向围坐一圈，每人持有一个密码（正整数）。一开始任选一个正整数作为报数上限值 m，从第一个人开始按顺时针方向自 1 开始顺序报数，报到 m 时停止报数。报 m 的人出列，将他的密码作为新的 m 值，从他在顺时针方 向上的下一个人开始重新从 1 报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序">
+  <meta name="description" content="约瑟夫(Joseph)问题的一种描述是：编号为 1，2，…..，n 的 n 个人按顺时针方向围坐一圈，每人持有一个密码（正整数）。一开始任选一个正整数作为报数上限值 m，从第一个人开始按顺时针方向自 1 开始顺序报数，报到 m 时停止报数。报 m 的人出列，将他的密码作为新的 m 值，从他在顺时针方 向上的下一个人开始重新从 1 报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="约瑟夫环问题的C语言算法实现">
 <meta property="og:url" content="http://lesliewong.cn/2018/10/25/约瑟夫环问题的C语言算法实现代码/index.html">
-<meta property="og:site_name" content="马树菌的博客小站">
-<meta property="og:description" content="约瑟夫(Joseph)问题的一种描述是：编号为 1，2，⋯ ⋯ n 的 n 个人按顺时针方向围坐一圈，每人持有一个密码（正整数）。一开始任选一个正整数作为报数上限值 m，从第一个人开始按顺时针方向自 1 开始顺序报数，报到 m 时停止报数。报 m 的人出列，将他的密码作为新的 m 值，从他在顺时针方 向上的下一个人开始重新从 1 报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序">
+<meta property="og:site_name" content="马树菌的博客驿站">
+<meta property="og:description" content="约瑟夫(Joseph)问题的一种描述是：编号为 1，2，…..，n 的 n 个人按顺时针方向围坐一圈，每人持有一个密码（正整数）。一开始任选一个正整数作为报数上限值 m，从第一个人开始按顺时针方向自 1 开始顺序报数，报到 m 时停止报数。报 m 的人出列，将他的密码作为新的 m 值，从他在顺时针方 向上的下一个人开始重新从 1 报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://lesliewong.cn/2018/10/25/约瑟夫环问题的C语言算法实现代码/Joseph运行结果.jpg">
 <meta property="og:image" content="http://lesliewong.cn/2018/10/25/约瑟夫环问题的C语言算法实现代码/2.cat.jpg">
-<meta property="og:updated_time" content="2018-11-19T13:50:56.353Z">
+<meta property="og:updated_time" content="2018-12-09T09:23:51.797Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="约瑟夫环问题的C语言算法实现">
-<meta name="twitter:description" content="约瑟夫(Joseph)问题的一种描述是：编号为 1，2，⋯ ⋯ n 的 n 个人按顺时针方向围坐一圈，每人持有一个密码（正整数）。一开始任选一个正整数作为报数上限值 m，从第一个人开始按顺时针方向自 1 开始顺序报数，报到 m 时停止报数。报 m 的人出列，将他的密码作为新的 m 值，从他在顺时针方 向上的下一个人开始重新从 1 报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序">
+<meta name="twitter:description" content="约瑟夫(Joseph)问题的一种描述是：编号为 1，2，…..，n 的 n 个人按顺时针方向围坐一圈，每人持有一个密码（正整数）。一开始任选一个正整数作为报数上限值 m，从第一个人开始按顺时针方向自 1 开始顺序报数，报到 m 时停止报数。报 m 的人出列，将他的密码作为新的 m 值，从他在顺时针方 向上的下一个人开始重新从 1 报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序">
 <meta name="twitter:image" content="http://lesliewong.cn/2018/10/25/约瑟夫环问题的C语言算法实现代码/Joseph运行结果.jpg">
   
-    <link rel="alternative" href="/atom.xml" title="马树菌的博客小站" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="马树菌的博客驿站" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -201,7 +201,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>约瑟夫(Joseph)问题的一种描述是：编号为 1，2，⋯ ⋯ n 的 n 个人按顺时针方向围坐一圈，每人持有一个密码（正整数）。一开始任选一个正整数作为报数上限值 m，从第一个人开始按顺时针方向自 1 开始顺序报数，报到 m 时停止报数。报 m 的人出列，将他的密码作为新的 m 值，从他在顺时针方 向上的下一个人开始重新从 1 报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序。 </p>
+<p>约瑟夫(Joseph)问题的一种描述是：编号为 1，2，…..，n 的 n 个人按顺时针方向围坐一圈，每人持有一个密码（正整数）。一开始任选一个正整数作为报数上限值 m，从第一个人开始按顺时针方向自 1 开始顺序报数，报到 m 时停止报数。报 m 的人出列，将他的密码作为新的 m 值，从他在顺时针方 向上的下一个人开始重新从 1 报数，如此下去，直至所有人全部出列为止。试设计一个程序求出出列顺序。 </p>
 <a id="more"></a>
 <h4 id="基本要求"><a href="#基本要求" class="headerlink" title="基本要求"></a>基本要求</h4><p>利用单向循环链表存储结构模拟此过程，按照出列的顺序印出各人的编号。 </p>
 <h4 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h4><p>n=7, 7 个人的密码依次为：3，1，7，2，4，8，4，首先 m 值为 6（正 确的出列顺序应为 6，1，4，7，2，3，5），输出的密码为 8，3，2，4，1， 7，4. </p>
@@ -454,11 +454,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
