@@ -6,74 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://lesliewong.cn">
-  <title>借助Docker和Kodexplorer实现简易化部署Discuz类论坛网站 | 马树菌的博客驿站</title>
+  <title>如何用优雅的格式打印C语言代码？ | 马树菌的博客驿站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基于DiscuzX系列构建的论坛可以说是大家在日常浏览各类BBS网站中接触最多的论坛类型了。本教程旨在引导读者通过简单明确的一些步骤就打造出自己的论坛网站，做一个实实在在的站长。">
-<meta name="keywords" content="前端,建站">
+  <meta name="description" content="​自己在学习过程中发现，大家经常用来敲代码的sublime没有提供代码打印功能，而教学过程中用到的Dev-C++打印出来的东西则是歪歪扭扭的，十分难看。Visual C++ 6.0 更是由于兼容性问题，在本人的win10上无法打印——因此，安利一款可以用优雅格式打印C语言代码的软件——Keil C。只需要区区4个步骤，便可用优雅的格式打印C语言代码。">
+<meta name="keywords" content="技巧">
 <meta property="og:type" content="article">
-<meta property="og:title" content="借助Docker和Kodexplorer实现简易化部署Discuz类论坛网站">
-<meta property="og:url" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/index.html">
+<meta property="og:title" content="如何用优雅的格式打印C语言代码？">
+<meta property="og:url" content="http://lesliewong.cn/2018/12/14/How+to+print+c+document+in+elegant+format/index.html">
 <meta property="og:site_name" content="马树菌的博客驿站">
-<meta property="og:description" content="基于DiscuzX系列构建的论坛可以说是大家在日常浏览各类BBS网站中接触最多的论坛类型了。本教程旨在引导读者通过简单明确的一些步骤就打造出自己的论坛网站，做一个实实在在的站长。">
+<meta property="og:description" content="​自己在学习过程中发现，大家经常用来敲代码的sublime没有提供代码打印功能，而教学过程中用到的Dev-C++打印出来的东西则是歪歪扭扭的，十分难看。Visual C++ 6.0 更是由于兼容性问题，在本人的win10上无法打印——因此，安利一款可以用优雅格式打印C语言代码的软件——Keil C。只需要区区4个步骤，便可用优雅的格式打印C语言代码。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539352833349.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539353052321.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539353208721.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539353436760.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539353702890.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539353761344.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539356370101.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539356521977.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539356695756.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539357062935.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539357011006.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539357779494.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539357880701.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539440950942.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539441010102.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539441240936.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539442812495.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539443197084.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539443248146.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539443286639.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539443365470.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539615814983.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539616198499.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539616297332.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539616367172.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539616544527.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539616844526.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539627239350.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539627697904.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539627757821.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539627797489.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539627933216.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539628008064.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539629018926.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542481517619.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542481977323.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542482296406.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542482355809.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542482555141.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542483128118.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542483393558.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542483825857.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542484287768.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542600360615.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542599669959.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542600619767.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1542602776485.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1543301253211.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1543303448584.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1543307987994.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1543308134838.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1543308358551.png">
-<meta property="og:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/4.cow.jpg">
-<meta property="og:updated_time" content="2018-12-06T12:45:58.993Z">
+<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38b116804b2.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38b1a45da95.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38b1ce00441.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38b21ddd9f2.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38b23d49eb7.jpg">
+<meta property="og:updated_time" content="2019-01-11T15:13:50.852Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="借助Docker和Kodexplorer实现简易化部署Discuz类论坛网站">
-<meta name="twitter:description" content="基于DiscuzX系列构建的论坛可以说是大家在日常浏览各类BBS网站中接触最多的论坛类型了。本教程旨在引导读者通过简单明确的一些步骤就打造出自己的论坛网站，做一个实实在在的站长。">
-<meta name="twitter:image" content="http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/1539352833349.png">
+<meta name="twitter:title" content="如何用优雅的格式打印C语言代码？">
+<meta name="twitter:description" content="​自己在学习过程中发现，大家经常用来敲代码的sublime没有提供代码打印功能，而教学过程中用到的Dev-C++打印出来的东西则是歪歪扭扭的，十分难看。Visual C++ 6.0 更是由于兼容性问题，在本人的win10上无法打印——因此，安利一款可以用优雅格式打印C语言代码的软件——Keil C。只需要区区4个步骤，便可用优雅的格式打印C语言代码。">
+<meta name="twitter:image" content="https://i.loli.net/2019/01/11/5c38b116804b2.jpg">
   
     <link rel="alternative" href="/atom.xml" title="马树菌的博客驿站" type="application/atom+xml">
   
@@ -231,313 +183,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-借助docker实现建议部署Kodexplorer和Discuz论坛网站" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-How+to+print+c+document+in+elegant+format" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      借助Docker和Kodexplorer实现简易化部署Discuz类论坛网站
+      如何用优雅的格式打印C语言代码？
     </h1>
   
 
         
         <a href="" class="archive-article-date">
-  	<time datetime="2018-11-27T17:53:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-28</time>
+  	<time datetime="2018-12-13T17:53:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>基于DiscuzX系列构建的论坛可以说是大家在日常浏览各类BBS网站中接触最多的论坛类型了。本教程旨在引导读者通过简单明确的一些步骤就打造出自己的论坛网站，做一个实实在在的站长。</p>
+        <p>​自己在学习过程中发现，大家经常用来敲代码的sublime没有提供代码打印功能，而教学过程中用到的Dev-C++打印出来的东西则是歪歪扭扭的，十分难看。Visual C++ 6.0 更是由于兼容性问题，在本人的win10上无法打印——<br>因此，安利一款可以用优雅格式打印C语言代码的软件——Keil C。只需要区区4个步骤，便可用优雅的格式打印C语言代码。</p>
 <a id="more"></a>
-<h2 id="工具-原料"><a href="#工具-原料" class="headerlink" title="工具/原料"></a>工具/原料</h2><blockquote>
-<p>腾讯云服务器 CentOS 7.2 64位；</p>
-<p>远程控制程序  Xshell 6;</p>
-<p>谷歌浏览器 版本号 69.0.3497.81 ；</p>
-<p>DiscuzX3.4代码包。</p>
-</blockquote>
-<h2 id="知识科普"><a href="#知识科普" class="headerlink" title="知识科普"></a>知识科普</h2><blockquote>
-<p><strong>Docker:</strong>Docker是一个开源的引擎，可以轻松地为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（虚拟机）、bare metal、OpenStack集群和其他的基础应用平台。</p>
-<p>Docker通常用于如下场景：</p>
-<ul>
-<li>Web应用的自动化打包和发布；</li>
-<li>自动化测试和持续集成、发布；</li>
-<li>在服务型环境中部署和调整数据库或其他的后台应用；</li>
-<li>从头编译或者扩展现有的OpenShift或Cloud Foundry平台来搭建自己的PaaS环境。</li>
-</ul>
-<p>Docker中文社区：<a href="http://www.docker.org.cn/" target="_blank" rel="noopener">www.docker.org.cn/</a></p>
-<p>Docker官方文档：<a href="https://docs.docker.com/" target="_blank" rel="noopener">https://docs.docker.com/</a></p>
-<p>不过，我们这里所用到的Kodexplorer脚本已经由某位前辈使用Docker容器封装好了。在具体使用时只需要在调用一条命令即可（见下文）</p>
-</blockquote>
-<hr>
-<blockquote>
-<p><strong>Xshell</strong>:一款强大的安全终端模拟软件，支持SHH1，SHH2，以及Microsoft Windows 平台的TELNET协议。Xshell独具创新性的设计和特色，助力于用户在复杂的网络环境中通过互联网安全连接到远程书机中。Xshell有商业版和免费版两种，免费版限于家庭和学校用户，限制也不是太多。</p>
-<p>Xshell官方页面：<a href="https://www.netsarang.com/products/xsh_overview.html" target="_blank" rel="noopener">https://www.netsarang.com/products/xsh_overview.html</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p><strong>Kodexplorer</strong>:一款快捷高效的私有云和在线文档管理系统，为个人网站、企业私有云部署、网络存储、在线文档管理、在线办公等提供安全可控、简便易用的体验。Kodexplorer采用windows风格界面及操作习惯，用户无需适应即可快速上手，且其支持几百种常用文件格式的在线预览。官方有提供开源版本。</p>
-<p>Kodexplorer官方网站：<a href="https://www.kodcloud.com/" target="_blank" rel="noopener">https://www.kodcloud.com/</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>Discuz ! X: Discuz!X 社区软件，是一个采用 PHP 和 MySQL 等其他多种数据库构建的性能优异、功能全面、安全稳定的社区论坛平台，是全球市场占有率第一的社区论坛（BBS）软件。</p>
-<p>Discuz ! 官方站：<a href="http://www.discuz.net/forum-10-1.html" target="_blank" rel="noopener">http://www.discuz.net/forum-10-1.html</a> </p>
-</blockquote>
-<h2 id="详细步骤："><a href="#详细步骤：" class="headerlink" title="详细步骤："></a>详细步骤：</h2><h3 id="1）配置腾讯云服务器"><a href="#1）配置腾讯云服务器" class="headerlink" title="1）配置腾讯云服务器"></a>1）配置腾讯云服务器</h3><blockquote>
-<ol>
-<li>购置域名和云服务器</li>
-</ol>
-<p>   用自己的微信号登入腾讯云官网（<a href="https://cloud.tencent.com/），选择左上角云产品中的云服务器，新建云服务器（如图）；" target="_blank" rel="noopener">https://cloud.tencent.com/），选择左上角云产品中的云服务器，新建云服务器（如图）；</a></p>
-<hr>
-<p>   <img src="1539352833349.png" alt=""></p>
-<hr>
-<p>   进去后就是云服务器的配置界面了，地域、机型的话按自己需要选择，关键在于选择操作系统为<strong>CentOS  7.2 64位</strong>。</p>
-<hr>
-<p>   <img src="1539353052321.png" alt=""></p>
-<hr>
-<p>   订单完成后就是下图中的状态了。主机密码的话腾讯云会通过站内信的方式发给我们，请注意网站右上角消息，并记得及时修改初始密码）</p>
-<hr>
-<p>   <img src="1539353208721.png" alt=""></p>
-<hr>
-<p>   接下来我们讲注册域名。选择左上角中的云产品的域名注册，进入我的域名管理界面如下</p>
-<hr>
-<p>   <img src="1539353436760.png" alt=""></p>
-<hr>
-<p>   点击注册域名，在查询框里输入选择自己需要的域名及后缀，查询未被他人占用后加入购物车立即购买即可</p>
-<hr>
-<p>   <img src="1539353702890.png" alt=""></p>
-<hr>
-<p>   例如本人的域名（已备案）</p>
-<hr>
-<p>   <img src="1539353761344.png" alt=""></p>
-<hr>
-<p>   注意：众所周知的因素，在腾讯云注册的新域名烦请走下备案流程，具体流程请移步参考腾讯云官方的备案文档（人家已经为你省了很多步骤了）</p>
-<p>   <a href="https://cloud.tencent.com/document/product/243" target="_blank" rel="noopener">https://cloud.tencent.com/document/product/243</a></p>
-<ol start="2">
-<li>映射域名和云服务器</li>
-</ol>
-<p>   点击云产品中的云解析进入云解析后台，进入右下边“操作”下的“解析”</p>
-<hr>
-<p>   <img src="1539356370101.png" alt=""></p>
-<hr>
-<p>   <img src="1539356521977.png" alt=""></p>
-<hr>
-<p>   添加记录，分别用鼠标点击不同的输入框下方会出现相应说明。自己多体验——</p>
-<hr>
-<p>   <img src="1539356695756.png" alt=""></p>
-<hr>
-<p>   对于我们目前讲到的这个实例来说，我们选择记录类型为A，在记录值中输入自己云服务器的公网IP（在云服务器控制台可查）</p>
-<hr>
-<p>   <img src="1539357062935.png" alt=""></p>
-<hr>
-<p>   <img src="1539357011006.png" alt=""></p>
-<hr>
-<p>   设置好了后，保存即可。</p>
-<p>   就这样，云服务器和域名的映射就设置好了——</p>
-</blockquote>
-<hr>
-<h3 id="2）Xshell远程连接服务器"><a href="#2）Xshell远程连接服务器" class="headerlink" title="2）Xshell远程连接服务器"></a>2）Xshell远程连接服务器</h3><blockquote>
-<p>​    登录云服务器的话，可以直接在腾讯云官网的云服务器后台里登录（如图），不过我们这里采用的是另外一种方法，使用专业远程控制软件Xshell来协助远程登录。</p>
-<hr>
-<p><img src="1539357779494.png" alt=""></p>
-<hr>
-<p><img src="1539357880701.png" alt=""></p>
-</blockquote>
-<blockquote>
-<hr>
-<p>1.到官网下载Xshell 6 软件</p>
-<p>在浏览框里输入以下链接：<a href="https://www.netsarang.com/products/xsh_overview.html" target="_blank" rel="noopener">https://www.netsarang.com/products/xsh_overview.html</a> 进入Xshell的官方下载界面</p>
-<hr>
-<p><img src="1539440950942.png" alt=""></p>
-<hr>
-<p>点击download后进入版本选择界面，选择家庭/学校用途版本,随便填写一些信息及重要的电子邮件地址，提交就行。</p>
-<hr>
-<p><img src="1539441010102.png" alt=""></p>
-<hr>
-<p>​    之后便会有邮件发至电子邮箱，点击里面的链接 </p>
-<p>​    即可下载。</p>
-<hr>
-<p><img src="1539441240936.png" alt=""></p>
-<hr>
-<p>2.安装Xshell 6 </p>
-<p>双击下载完成的exe文件，进行安装</p>
-<hr>
-<p><img src="1539442812495.png" alt=""></p>
-<hr>
-<p>安装界面，点下一步，同意条款，下一步，随便输入名字公司信息，安装到C盘外，确定安装，进度条跑完即可 </p>
-<hr>
-<p> <img src="1539443197084.png" alt=""></p>
-<hr>
-<p><img src="1539443248146.png" alt=""></p>
-<hr>
-<p><img src="1539443286639.png" alt=""></p>
-<hr>
-<p><img src="1539443365470.png" alt=""></p>
-<hr>
-<p>3.Xshell连接远程服务器</p>
-<p>运行Xshell, 初始界面如下</p>
-<hr>
-<p> <img src="1539615814983.png" alt=""></p>
-<hr>
-<p>点菜单栏文件— 新建，出现新建会话弹窗。在主机输入框中输入自己的云服务器分配的公网IP，其他设置不变，点击“连接”</p>
-<hr>
-<p><img src="1539616198499.png" alt=""></p>
-<hr>
-<p>之后会出现SSH安全警告，如果是在自己的电脑上操作的话，“接受并保存”即可。</p>
-<hr>
-<p><img src="1539616297332.png" alt=""></p>
-<hr>
-<p>输入登录用户名（默认为root)</p>
-<hr>
-<p><img src="1539616367172.png" alt=""></p>
-<hr>
-<p>接下来输入主机密码</p>
-<hr>
-<p><img src="1539616544527.png" alt=""></p>
-<hr>
-<p>登录成功！ &lt;(￣ˇ￣)/）</p>
-<hr>
-<p><img src="1539616844526.png" alt=""></p>
-<hr>
-<p>这样，本地与远程云服务器的连接就完成了！</p>
-<p>(^o^)/~</p>
-</blockquote>
-<hr>
-<h3 id="3）借助Docker向服务器安装脚本"><a href="#3）借助Docker向服务器安装脚本" class="headerlink" title="3）借助Docker向服务器安装脚本"></a>3）借助Docker向服务器安装脚本</h3><blockquote>
-<p>1.连接成功后，在命令行界面输入以下脚本命令</p>
-<p>curl -sSL <a href="http://www.xinghuankj.com/docker/script/xinghuan-V1.6.sh" target="_blank" rel="noopener">http://www.xinghuankj.com/docker/script/xinghuan-V1.6.sh</a> | bash</p>
-<p>按回车就可以开始安装用Docker封装好的Kodexplorer脚本了.</p>
-<hr>
-<p><img src="1539627239350.png" alt=""></p>
-<hr>
-<p>2.当命令行界面出现“请修改需要访问网站的电脑或者主机的hosts文件，将以下内容加入hosts文件”提示的时候，即宣告安装完成了。我们移步到浏览器那里去折腾。</p>
-<hr>
-<p><img src="1539627697904.png" alt=""></p>
-<hr>
-</blockquote>
-<hr>
-<h3 id="4）浏览器操作Kodexplorer"><a href="#4）浏览器操作Kodexplorer" class="headerlink" title="4）浏览器操作Kodexplorer"></a>4）浏览器操作Kodexplorer</h3><blockquote>
-<p> 1.浏览器地址栏里输入主机IP（也可输入已配置好的域名），访问Kodexplorer，初始界面如下，需要我们设置管理员账号</p>
-<hr>
-<p> <img src="1539627757821.png" alt=""></p>
-<hr>
-<p> 2.设置完毕点登录，会跳转到Kodexplorer登录界面，用我们刚才的管理员账号直接登录</p>
-<p> （PS: 可能会出现Kodexplorer版本更新弹窗，按照指示操作就行）</p>
-<hr>
-<p> <img src="1539627797489.png" alt=""></p>
-<hr>
-<p> 3.登录成功后的界面如下，可以注意到右上边有个提示告诉我们文件仅为只读状态。我们需要移步到Xshell中获取Kodexplorer的文件读写权限。</p>
-<hr>
-<p> <img src="1539627933216.png" alt=""></p>
-<hr>
-<p> 4.在Xshell的命令行界面输入以下命令</p>
-<p> chmod -R 777 /webser/</p>
-<hr>
-<p> <img src="1539628008064.png" alt=""></p>
-<hr>
-<p> 5.回到浏览器中，点刷新，就会发现右上边的提示符号消失了，我们成功地获取了文件读写权限</p>
-<hr>
-<p> <img src="1539629018926.png" alt=""></p>
-<hr>
-<p> 折腾到这儿，一个直接在浏览器跑的的图形化Web网站管理后台就基本有了雏形了。接下来，我们就借助这个平台，上传DiscuzX！压缩包，做建站准备。</p>
-</blockquote>
-<hr>
-<h3 id="5）创建DiscuzX网站资源管理后台"><a href="#5）创建DiscuzX网站资源管理后台" class="headerlink" title="5）创建DiscuzX网站资源管理后台"></a>5）创建DiscuzX网站资源管理后台</h3><blockquote>
-<p> 1.前往DiscuzX！的官方代码托管站点下载代码压缩包。网址是 <a href="https://gitee.com/ComsenzDiscuz/DiscuzX" target="_blank" rel="noopener">https://gitee.com/ComsenzDiscuz/DiscuzX</a> 界面如下：</p>
-<hr>
-<p> <img src="1542481517619.png" alt=""></p>
-<hr>
-<p> 2.点击上图箭头所指示的“克隆/下载”按钮，下载zip压缩包到本地。（什么验证码之类的就照人家提示做就行了——）</p>
-<hr>
-<p> <img src="1542481977323.png" alt=""></p>
-<hr>
-<p> 3.跳转回先前的kodexplorer管理后台，进入到/webser/www/对应的文件夹目录下面，上传DiscuzX压缩包。</p>
-<hr>
-<p> <img src="1542482296406.png" alt=""></p>
-<hr>
-<p> <img src="1542482355809.png" alt=""></p>
-<hr>
-<p> 4.操作完成界面如下，接着就双击zip包解压缩，将子文件夹upload右键解压到当前目录。</p>
-<hr>
-<p> <img src="1542482555141.png" alt=""></p>
-<hr>
-<p> 5.将upload重命名为dz。（0.o   看自己想法了）  接下来前往/webser/compose/nginx/conf.d/目录下。</p>
-<hr>
-<p> <img src="1542483128118.png" alt=""></p>
-<hr>
-<p> 6.右键kod.conf-更多-创建副本，并将副本重命名为dz.conf，然后打开dz.conf, </p>
-<hr>
-<p> <img src="1542483393558.png" alt=""></p>
-<hr>
-<p> <img src="1542483825857.png" alt=""></p>
-<hr>
-<p> 7.改写root字段的内容为 /webser/www/dz,   server_name字段改为example.lesliewong.cn. (读者请填写自己对应服务器映射的域名)</p>
-<hr>
-<p> <img src="1542484287768.png" alt=""></p>
-<hr>
-<p> 8.同时还要修改同一目录下的kod.conf文件，修改内容如图所标（域名请自觉对应），作用是使这个域名映射到DiscuzX站点的管理后台。（依旧是这个kodexplorer资源管理器）</p>
-<hr>
-<p> <img src="1542600360615.png" alt=""></p>
-<hr>
-<p> 9.OK，做完这些之后马上就要大功告成了！ 接下来我们转移到 Xshell6命令行界面上，输入下面一行命令重启nginx服务器。 </p>
-<p> docker restart nginx </p>
-<hr>
-<p> <img src="1542599669959.png" alt=""></p>
-<hr>
-<p> 10.转到浏览器网址栏输入刚才的dz文件夹域名example.lesliewong.cn. 铛铛~铛铛！DiscuzX的配置页面出现了！</p>
-<hr>
-<p> <img src="1542600619767.png" alt=""></p>
-<hr>
-</blockquote>
-<hr>
-<h3 id="6）连接数据库对接DiscuzX站点"><a href="#6）连接数据库对接DiscuzX站点" class="headerlink" title="6）连接数据库对接DiscuzX站点"></a>6）连接数据库对接DiscuzX站点</h3><blockquote>
-<p>1.照着页面上的提示按钮，我同意——（开始安装）下一步——（设置运行环境：全新）下一步，就到了         创建数据库页面，如下。在此我们需要打住一下，回到我们的腾讯云主机管理页面。</p>
-<hr>
-<p><img src="1542602776485.png" alt=""></p>
-<hr>
-<p>2.来到腾讯云主机管理页面，如下图，复制主机对应的内网IP，然后填写到上面的DiscuzX表单上的数据库服务器字段（去掉localhost）。</p>
-<hr>
-<p><img src="1543301253211.png" alt=""></p>
-<hr>
-<p>3.接着我们需要到Kodexplorer界面去获取数据库密码，如下图。打开/webser/README.MD, 弹出的文件里面有写数据库密码，将其复制下来，同样拷贝到上面的DiscuzX表单中。</p>
-<hr>
-<p><img src="1543303448584.png" alt=""></p>
-<hr>
-<p>4.完成上面的步骤后，再补充表单中其他的信息，就是下面这个样子了。</p>
-<hr>
-<p><img src="1543307987994.png" alt=""></p>
-<hr>
-<p>5.万事俱备，只欠东风。OK！点击“下一步”。进度条跑完就是下面这个页面了——</p>
-<hr>
-<p><img src="1543308134838.png" alt=""></p>
-<hr>
-<p>6.点击右下角的“您的论坛已完成安装，点此访问”即可访问我们的目标站点，DiscuzX 论坛原始界面。至于后面的怎样论坛定制化，大家就去DiscuzX的官方论坛看一些优秀的教程吧！有很多开源的应用可以使用。</p>
-<hr>
-<p><img src="1543308358551.png" alt=""></p>
-<hr>
-<p>​    ~ o(<em>￣▽￣</em>)ブ</p>
-</blockquote>
-<hr>
-<h2 id="尾语"><a href="#尾语" class="headerlink" title="尾语"></a>尾语</h2><blockquote>
-<hr>
-<p>教程到这里，建站流程就走完了，感谢各位耐心看到这里&lt;(￣ˇ￣)/</p>
-<p>通过这个教程，我们接触到了kodexplorer，一款很好用的直接在浏览器跑的图形化资源管理器，xshell 6， Linux机器远程控制软件，以及云的知识~~， 当然也少不了我们关注的主角——DiscuzX论坛。</p>
-<p>相信在未来的发展中，各位依旧可以发现这些工具对自己起到很大的帮助。</p>
-<p>共勉   ~&lt;(￣︶￣)↗</p>
-<hr>
-</blockquote>
-<hr>
-<h6 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h6><blockquote>
-<p><a href="http://api.xinghuankj.com/" target="_blank" rel="noopener">http://api.xinghuankj.com/</a></p>
-<p><a href="https://kodcloud.com/help/show-1.html" target="_blank" rel="noopener">https://kodcloud.com/help/show-1.html</a></p>
-<p><a href="https://www.youtube.com/watch?v=IN7FrJopIIM" target="_blank" rel="noopener">https://www.youtube.com/watch?v=IN7FrJopIIM</a></p>
-<p><a href="http://www.docker.org.cn/book/docker/what-is-docker-16.html" target="_blank" rel="noopener">http://www.docker.org.cn/book/docker/what-is-docker-16.html</a></p>
-</blockquote>
-<p><img src="4.cow.jpg" alt=""></p>
+<h3 id="1-下载安装单片机调试软件Keil-C。"><a href="#1-下载安装单片机调试软件Keil-C。" class="headerlink" title="1. 下载安装单片机调试软件Keil C。"></a>1. 下载安装单片机调试软件Keil C。</h3><p><img src="https://i.loli.net/2019/01/11/5c38b116804b2.jpg" alt="打印.jpg" title="打印.jpg"></p>
+<h3 id="2-Keil-C界面工具栏打开C语言文件。"><a href="#2-Keil-C界面工具栏打开C语言文件。" class="headerlink" title="2. Keil C界面工具栏打开C语言文件。"></a>2. Keil C界面工具栏打开C语言文件。</h3><p><img src="https://i.loli.net/2019/01/11/5c38b1a45da95.jpg" alt="格式工厂打印2.jpg" title="格式工厂打印2.jpg"></p>
+<h3 id="3-按Ctrl-P快捷键快速打开打印界面。"><a href="#3-按Ctrl-P快捷键快速打开打印界面。" class="headerlink" title="3. 按Ctrl+P快捷键快速打开打印界面。"></a>3. 按Ctrl+P快捷键快速打开打印界面。</h3><p><img src="https://i.loli.net/2019/01/11/5c38b1ce00441.jpg" alt="打印3.jpg" title="打印3.jpg"></p>
+<h3 id="4-打印完成的页面效果如下，实在很优雅-……"><a href="#4-打印完成的页面效果如下，实在很优雅-……" class="headerlink" title="4. 打印完成的页面效果如下，实在很优雅(^__^) ……"></a>4. 打印完成的页面效果如下，实在很优雅(<em>^__^</em>) ……</h3><p><img src="https://i.loli.net/2019/01/11/5c38b21ddd9f2.jpg" alt="格式工厂打印4.jpg" title="格式工厂打印4.jpg"></p>
+<p><img src="https://i.loli.net/2019/01/11/5c38b23d49eb7.jpg" alt="5.horse.jpg" title="5.horse.jpg"></p>
 
       
 
@@ -551,11 +223,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">建站</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技巧</a>
         		</li>
       		
 		</ul>
@@ -567,11 +235,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端/建站//" class="article-tag-list-link color3">建站</a>
+        			<a href="/categories/技巧//" class="article-tag-list-link color3">技巧</a>
         		</li>
       		
 		</ul>
@@ -626,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://lesliewong.cn/2018/11/28/借助docker实现建议部署Kodexplorer和Discuz论坛网站/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://lesliewong.cn/2018/12/14/How+to+print+c+document+in+elegant+format/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -642,18 +306,9 @@
   
 <nav id="article-nav">
   
-    <a href="../../../12/14/如何用优雅的格式打印C语言代码？/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          如何用优雅的格式打印C语言代码？
-        
-      </div>
-    </a>
   
-  
-    <a href="../../03/链表结构实现一元多项式的加法、减法、乘法和微分运算（C版本）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">一元多项式的加法、减法、乘法和微分运算的C语言链表结构算法实现</div>
+    <a href="../../../11/28/How+to+build+a+discuz+forum+using+Docker+and+Kodexplorer/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">借助Docker和Kodexplorer实现简易化部署Discuz类论坛网站</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -680,7 +335,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#工具-原料"><span class="toc-number">1.</span> <span class="toc-text">工具/原料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识科普"><span class="toc-number">2.</span> <span class="toc-text">知识科普</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#详细步骤："><span class="toc-number">3.</span> <span class="toc-text">详细步骤：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）配置腾讯云服务器"><span class="toc-number">3.1.</span> <span class="toc-text">1）配置腾讯云服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）Xshell远程连接服务器"><span class="toc-number">3.2.</span> <span class="toc-text">2）Xshell远程连接服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3）借助Docker向服务器安装脚本"><span class="toc-number">3.3.</span> <span class="toc-text">3）借助Docker向服务器安装脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4）浏览器操作Kodexplorer"><span class="toc-number">3.4.</span> <span class="toc-text">4）浏览器操作Kodexplorer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5）创建DiscuzX网站资源管理后台"><span class="toc-number">3.5.</span> <span class="toc-text">5）创建DiscuzX网站资源管理后台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6）连接数据库对接DiscuzX站点"><span class="toc-number">3.6.</span> <span class="toc-text">6）连接数据库对接DiscuzX站点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#尾语"><span class="toc-number">4.</span> <span class="toc-text">尾语</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#参考文献"><span class="toc-number">4.0.0.0.1.</span> <span class="toc-text">参考文献</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-下载安装单片机调试软件Keil-C。"><span class="toc-number">1.</span> <span class="toc-text">1. 下载安装单片机调试软件Keil C。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Keil-C界面工具栏打开C语言文件。"><span class="toc-number">2.</span> <span class="toc-text">2. Keil C界面工具栏打开C语言文件。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-按Ctrl-P快捷键快速打开打印界面。"><span class="toc-number">3.</span> <span class="toc-text">3. 按Ctrl+P快捷键快速打开打印界面。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-打印完成的页面效果如下，实在很优雅-……"><span class="toc-number">4.</span> <span class="toc-text">4. 打印完成的页面效果如下，实在很优雅(^__^) ……</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -698,10 +353,10 @@
 	<!-- 引入光速通行证css代码 -->
 		<link rel="stylesheet" href="//c.fansx.com/tc.css"/>
 	<!-- 评论框 start --> 
-		<div id="tc_s23p2018112815337"></div>
+		<div id="tc_s23p2018121415337"></div>
 	<!-- 评论框 end -->
 	<!-- 光速公共JS代码 start (一个网页只需插入一次) -->
-		<script src="//c.fansx.com/?m=c1&sid=23&pid=2018112815337"></script>
+		<script src="//c.fansx.com/?m=c1&sid=23&pid=2018121415337"></script>
 	<!-- 光速公共JS代码 end -->
 </div>
 
@@ -807,11 +462,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">建站</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -819,7 +474,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">建站</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
@@ -883,7 +538,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </li>
           
             <li class="search-li">
-              <a href="https://www.tobytao.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Tao的博客小站</a>
+              <a href="https://hexo.itsukio.com/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Tao的博客小站</a>
             </li>
           
             <li class="search-li">
