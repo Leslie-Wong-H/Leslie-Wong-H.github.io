@@ -6,74 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://lesliewong.cn">
-  <title>借助Docker和Kodexplorer实现简易化部署Discuz类论坛网站 | 马树菌的博客驿站</title>
+  <title>CSS中伪元素的定位上下文问题 | 马树菌的博客驿站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基于DiscuzX系列构建的论坛可以说是大家在日常浏览各类BBS网站中接触最多的论坛类型了。本教程旨在引导读者通过简单明确的一些步骤就打造出自己的论坛网站，做一个实实在在的站长。">
-<meta name="keywords" content="前端,建站">
+  <meta name="description" content="在研究CSS名著《CSS设计指南》（第3版）中，对讲到界面组件中的用CSS为弹出层设计三角形这个知识点时，对例子代码中伪元素的定位上下文关系产生了很大的困惑。">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="借助Docker和Kodexplorer实现简易化部署Discuz类论坛网站">
-<meta property="og:url" content="http://lesliewong.cn/2018/11/28/How+to+build+a+discuz+forum+using+Docker+and+Kodexplorer/index.html">
+<meta property="og:title" content="CSS中伪元素的定位上下文问题">
+<meta property="og:url" content="http://lesliewong.cn/2018/09/10/A-doubt-about-the-pseudo-element-in-CSS/index.html">
 <meta property="og:site_name" content="马树菌的博客驿站">
-<meta property="og:description" content="基于DiscuzX系列构建的论坛可以说是大家在日常浏览各类BBS网站中接触最多的论坛类型了。本教程旨在引导读者通过简单明确的一些步骤就打造出自己的论坛网站，做一个实实在在的站长。">
+<meta property="og:description" content="在研究CSS名著《CSS设计指南》（第3版）中，对讲到界面组件中的用CSS为弹出层设计三角形这个知识点时，对例子代码中伪元素的定位上下文关系产生了很大的困惑。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a789a43a5.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a7bf147e5.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a7e28af42.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a80442247.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a822d9bcf.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a840ae9a3.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a8766e1cc.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a89eaa7aa.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a8d180720.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a90065f39.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a91a9dec1.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a94693e80.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a983c27a6.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a9a68c6ad.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a9c054eaa.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a9e4b1150.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38aa069ae0b.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38aa25af089.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38aa479064e.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38aa6aeab30.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38aa84c72a2.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38aaa406125.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38aabf7d795.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ac86ce8b7.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ab011b479.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ab23dffb2.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38b059823bb.jpg">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38acc3ca254.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ace5a82d2.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ad131d7e4.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ad37a1d3d.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ad530a864.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ad7121732.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ad9633344.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38adbd9f297.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38addf3f0b5.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38adfc42e51.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ae135a06e.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ae38ee0a8.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ae528ef09.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ae698c08e.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38ae8ce7963.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38aec710ac6.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38aeecc8287.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38af18ea729.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38af39b8808.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38af5f6bc63.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38af8397193.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38af9c3939b.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38afb4c265e.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38afd575f2d.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38aff2d430a.png">
-<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38b0cc1aa7d.jpg">
-<meta property="og:updated_time" content="2019-01-11T15:13:45.776Z">
+<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a36b93191.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a36b92892.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a36b92e11.jpg">
+<meta property="og:image" content="https://i.loli.net/2019/01/11/5c38a36b93476.jpg">
+<meta property="og:updated_time" content="2019-01-13T01:56:18.164Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="借助Docker和Kodexplorer实现简易化部署Discuz类论坛网站">
-<meta name="twitter:description" content="基于DiscuzX系列构建的论坛可以说是大家在日常浏览各类BBS网站中接触最多的论坛类型了。本教程旨在引导读者通过简单明确的一些步骤就打造出自己的论坛网站，做一个实实在在的站长。">
-<meta name="twitter:image" content="https://i.loli.net/2019/01/11/5c38a789a43a5.png">
+<meta name="twitter:title" content="CSS中伪元素的定位上下文问题">
+<meta name="twitter:description" content="在研究CSS名著《CSS设计指南》（第3版）中，对讲到界面组件中的用CSS为弹出层设计三角形这个知识点时，对例子代码中伪元素的定位上下文关系产生了很大的困惑。">
+<meta name="twitter:image" content="https://i.loli.net/2019/01/11/5c38a36b93191.jpg">
   
     <link rel="alternative" href="/atom.xml" title="马树菌的博客驿站" type="application/atom+xml">
   
@@ -231,315 +182,65 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-How+to+build+a+discuz+forum+using+Docker+and+Kodexplorer" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-A-doubt-about-the-pseudo-element-in-CSS" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      借助Docker和Kodexplorer实现简易化部署Discuz类论坛网站
+      CSS中伪元素的定位上下文问题
     </h1>
   
 
         
         <a href="" class="archive-article-date">
-  	<time datetime="2018-11-27T17:53:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-28</time>
+  	<time datetime="2018-09-10T12:08:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>基于DiscuzX系列构建的论坛可以说是大家在日常浏览各类BBS网站中接触最多的论坛类型了。本教程旨在引导读者通过简单明确的一些步骤就打造出自己的论坛网站，做一个实实在在的站长。</p>
+        <hr>
+<p>在研究CSS名著《CSS设计指南》（第3版）中，对讲到界面组件中的用CSS为弹出层设计三角形这个知识点时，对例子代码中伪元素的定位上下文关系产生了很大的困惑。</p>
 <a id="more"></a>
-<h2 id="工具-原料"><a href="#工具-原料" class="headerlink" title="工具/原料"></a>工具/原料</h2><blockquote>
-<p>腾讯云服务器 CentOS 7.2 64位；</p>
-<p>远程控制程序  Xshell 6;</p>
-<p>谷歌浏览器 版本号 69.0.3497.81 ；</p>
-<p>DiscuzX3.4代码包。</p>
-</blockquote>
-<h2 id="知识科普"><a href="#知识科普" class="headerlink" title="知识科普"></a>知识科普</h2><blockquote>
-<p><strong>Docker:</strong>Docker是一个开源的引擎，可以轻松地为任何应用创建一个轻量级的、可移植的、自给自足的容器。开发者在笔记本上编译测试通过的容器可以批量地在生产环境中部署，包括VMs（虚拟机）、bare metal、OpenStack集群和其他的基础应用平台。</p>
-<p>Docker通常用于如下场景：</p>
-<ul>
-<li>Web应用的自动化打包和发布；</li>
-<li>自动化测试和持续集成、发布；</li>
-<li>在服务型环境中部署和调整数据库或其他的后台应用；</li>
-<li>从头编译或者扩展现有的OpenShift或Cloud Foundry平台来搭建自己的PaaS环境。</li>
-</ul>
-<p>Docker中文社区：<a href="http://www.docker.org.cn/" target="_blank" rel="noopener">www.docker.org.cn/</a></p>
-<p>Docker官方文档：<a href="https://docs.docker.com/" target="_blank" rel="noopener">https://docs.docker.com/</a></p>
-<p>不过，我们这里所用到的Kodexplorer脚本已经由某位前辈使用Docker容器封装好了。在具体使用时只需要在调用一条命令即可（见下文）</p>
-</blockquote>
 <hr>
+<h4 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">DOCTYPE</span> <span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">html</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">head</span>&gt;</span><br><span class="line">&lt;meta charset="utf-8" /&gt; </span><br><span class="line">&lt;title&gt;Stylin' with CSS - Figure 6.24 Popup Overlay&lt;/title&gt;</span><br><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">* &#123;<span class="attribute">margin</span>:<span class="number">0</span>; <span class="attribute">padding</span>:<span class="number">0</span>; <span class="attribute">font-family</span>:helvetica, arial, sans-serif;&#125;</span><br><span class="line"><span class="selector-tag">figure</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">144px</span>; <span class="attribute">height</span>:<span class="number">153px</span>; <span class="comment">/* sizing of image box */</span></span><br><span class="line">    <span class="attribute">margin</span>:<span class="number">20px</span> <span class="number">20px</span>;            <span class="comment">/* space between boxes */</span></span><br><span class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid <span class="number">#666</span>;        <span class="comment">/* image border */</span></span><br><span class="line">    <span class="attribute">position</span>:relative; <span class="comment">/* positioning context for popups */</span></span><br><span class="line">    <span class="attribute">float</span>:left; <span class="comment">/* makes images sit side by side */</span></span><br><span class="line">    &#125;</span><br><span class="line"><span class="selector-tag">img</span> &#123;<span class="attribute">display</span>:block;&#125;<span class="comment">/* remove baseline spacing from under image */</span></span><br><span class="line"><span class="selector-tag">figcaption</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>:none; <span class="comment">/* hides popups */</span></span><br><span class="line">    <span class="attribute">position</span>:absolute; <span class="comment">/* relative to images */</span></span><br><span class="line">    <span class="attribute">left</span>:<span class="number">74%</span>; <span class="attribute">top</span>:<span class="number">14px</span>; <span class="comment">/* positions popup on right side of image */</span></span><br><span class="line">    <span class="attribute">width</span>:<span class="number">130px</span>; <span class="comment">/* width of popup */</span></span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">10px</span>; <span class="comment">/* space around popup content */</span></span><br><span class="line">    <span class="attribute">background</span>:<span class="number">#f2eaea</span>;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">3px</span> solid red; <span class="attribute">border-radius</span>:<span class="number">6px</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="selector-tag">figure</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">figcaption</span> &#123;<span class="attribute">display</span>:block; <span class="attribute">z-index</span>:<span class="number">2</span>;&#125; <span class="comment">/* displays popup when image is hovered */</span></span><br><span class="line"><span class="selector-tag">figcaption</span> <span class="selector-tag">h3</span> &#123; <span class="comment">/* popup content */</span></span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">color</span>:<span class="number">#666</span>;</span><br><span class="line">    <span class="attribute">margin-bottom</span>:<span class="number">6px</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="selector-tag">figcaption</span> <span class="selector-tag">a</span> &#123; <span class="comment">/* popup content */</span></span><br><span class="line">    <span class="attribute">display</span>:block;</span><br><span class="line">    <span class="attribute">text-decoration</span>:none;</span><br><span class="line">    <span class="attribute">font-size</span>:<span class="number">12px</span>;</span><br><span class="line">    <span class="attribute">color</span>:<span class="number">#000</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="selector-tag">figcaption</span><span class="selector-pseudo">::after</span> &#123; <span class="comment">/* red triangle box*/</span></span><br><span class="line">    <span class="attribute">content</span>:<span class="string">""</span>; <span class="comment">/* some content required - using empty text string */</span></span><br><span class="line">    <span class="attribute">position</span>:absolute; <span class="comment">/* relative to popup */</span></span><br><span class="line">    <span class="attribute">border</span>:<span class="number">12px</span> solid;</span><br><span class="line">    <span class="attribute">border-color</span>:transparent red transparent transparent; </span><br><span class="line">    <span class="attribute">right</span>:<span class="number">100%</span>; <span class="attribute">top</span>:<span class="number">17px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">0px</span>; <span class="attribute">width</span>:<span class="number">0px</span>; <span class="comment">/* collapses box to create triangle */</span> </span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="selector-tag">body</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">figure</span>&gt;</span><br><span class="line">        &lt;img src="images/pink_heels.jpg" alt="pink heels" /&gt;</span><br><span class="line">        &lt;<span class="selector-tag">figcaption</span>&gt;</span><br><span class="line">            &lt;h3&gt;Pink Platforms&lt;/h3&gt;</span><br><span class="line">            &lt;a href="#"&gt;More info&lt;/a&gt;</span><br><span class="line">        &lt;/figcaption&gt;</span><br><span class="line">    &lt;/figure&gt;</span><br><span class="line">    &lt;figure class="click_me"&gt;</span><br><span class="line">        &lt;img src="images/leopard_heels.jpg" alt="leopard heels" /&gt;</span><br><span class="line">        &lt;<span class="selector-tag">figcaption</span>&gt;</span><br><span class="line">            &lt;h3&gt;Leopard Platforms&lt;/h3&gt;</span><br><span class="line">            &lt;a href="#"&gt;More info&lt;/a&gt;</span><br><span class="line">        &lt;/figcaption&gt;</span><br><span class="line">    &lt;/figure&gt;</span><br><span class="line">    &lt;figure class="click_me"&gt;</span><br><span class="line">        &lt;img src="images/red_heels.jpg" alt="red heels" /&gt;</span><br><span class="line">        &lt;<span class="selector-tag">figcaption</span>&gt;</span><br><span class="line">            &lt;h3&gt;Red Platforms&lt;/h3&gt;</span><br><span class="line">            &lt;a href="#"&gt;More info&lt;/a&gt;</span><br><span class="line">        &lt;/figcaption&gt;</span><br><span class="line">    &lt;/figure&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!-- OK to remove the code between here and &lt;/body&gt; --&gt;</span><br><span class="line">    &lt;!-- Please note that the watermarked image/images in this code example is/are provided only for the purpose of displaying the code example in your browser. Licensing rights to this image/images is/are not conveyed to you. If you would like to purchase licensing rights for the images in this book, please visit the following url: --&gt; </span><br><span class="line">    &lt;div style="clear:both; padding:100px 0 0 0; font-size:.85em; color:#666;"&gt;</span><br><span class="line">    &lt;p&gt;To purchase the stock images in this book and other great stock images, go to &lt;a href="http://www.bigstockphoto.com/?refid=PEECNmwgKb"&gt;bigstockphoto.com&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;A code example from &lt;em&gt;Stylin&amp;rsquo; with CSS, Third Edition&lt;/em&gt; by Charles Wyke-Smith. Visit &lt;a href="http://www.stylinwithcss.com"&gt;stylinwithcss.com&lt;/a&gt; for more CSS information and updates.&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>浏览器渲染后的效果如下：</p>
+<p><img src="https://i.loli.net/2019/01/11/5c38a36b93191.jpg" alt="1.jpg" title="1.jpg"></p>
+<hr>
+<p>文字说明框在鼠标悬浮于图片上时出现，同时框左边会出现由于边框透明原理而生出的三角形。具体原理代码如下：</p>
+<hr>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">figcaption</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>:none; <span class="comment">/* hides popups */</span></span><br><span class="line">    <span class="attribute">position</span>:absolute; <span class="comment">/* relative to images */</span></span><br><span class="line">    <span class="attribute">left</span>:<span class="number">74%</span>; <span class="attribute">top</span>:<span class="number">14px</span>; <span class="comment">/* positions popup on right side of image */</span></span><br><span class="line">    <span class="attribute">width</span>:<span class="number">130px</span>; <span class="comment">/* width of popup */</span></span><br><span class="line">    <span class="attribute">padding</span>:<span class="number">10px</span>; <span class="comment">/* space around popup content */</span></span><br><span class="line">    <span class="attribute">background</span>:<span class="number">#f2eaea</span>;</span><br><span class="line">    <span class="attribute">border</span>:<span class="number">3px</span> solid red; <span class="attribute">border-radius</span>:<span class="number">6px</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="selector-tag">figure</span><span class="selector-pseudo">:hover</span> <span class="selector-tag">figcaption</span> &#123;<span class="attribute">display</span>:block; <span class="attribute">z-index</span>:<span class="number">2</span>;&#125; <span class="comment">/* displays popup when image is hovered */</span></span><br><span class="line"><span class="selector-tag">figcaption</span><span class="selector-pseudo">::after</span> &#123; <span class="comment">/* red triangle box*/</span></span><br><span class="line">    <span class="attribute">content</span>:<span class="string">""</span>; <span class="comment">/* some content required - using empty text string */</span></span><br><span class="line">    <span class="attribute">position</span>:absolute; <span class="comment">/* relative to popup */</span></span><br><span class="line">    <span class="attribute">border</span>:<span class="number">12px</span> solid;</span><br><span class="line">    <span class="attribute">border-color</span>:transparent red transparent transparent; </span><br><span class="line">    <span class="attribute">right</span>:<span class="number">100%</span>; <span class="attribute">top</span>:<span class="number">17px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">0px</span>; <span class="attribute">width</span>:<span class="number">0px</span>; <span class="comment">/* collapses box to create triangle */</span> </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<p>根据《CSS设计指南（第3版）》中对定位上下文的解释，</p>
 <blockquote>
-<p><strong>Xshell</strong>:一款强大的安全终端模拟软件，支持SHH1，SHH2，以及Microsoft Windows 平台的TELNET协议。Xshell独具创新性的设计和特色，助力于用户在复杂的网络环境中通过互联网安全连接到远程书机中。Xshell有商业版和免费版两种，免费版限于家庭和学校用户，限制也不是太多。</p>
-<p>Xshell官方页面：<a href="https://www.netsarang.com/products/xsh_overview.html" target="_blank" rel="noopener">https://www.netsarang.com/products/xsh_overview.html</a></p>
+<p>在讲绝对定位的时候，我们知道绝对定位元素默认的定位上下文是body。这是因为body是标记中所有元素唯一的祖先元素。而实际上，绝对定位元素的任何祖先元素都可以成为它的定位上下文，只要你把相应祖先元素的position设定为relative即可。</p>
+<p>​                                    ——P91,人民邮电出版社，《CSS设计指南（第3版）》</p>
 </blockquote>
 <hr>
-<blockquote>
-<p><strong>Kodexplorer</strong>:一款快捷高效的私有云和在线文档管理系统，为个人网站、企业私有云部署、网络存储、在线文档管理、在线办公等提供安全可控、简便易用的体验。Kodexplorer采用windows风格界面及操作习惯，用户无需适应即可快速上手，且其支持几百种常用文件格式的在线预览。官方有提供开源版本。</p>
-<p>Kodexplorer官方网站：<a href="https://www.kodcloud.com/" target="_blank" rel="noopener">https://www.kodcloud.com/</a></p>
-</blockquote>
-<hr>
-<blockquote>
-<p>Discuz ! X: Discuz!X 社区软件，是一个采用 PHP 和 MySQL 等其他多种数据库构建的性能优异、功能全面、安全稳定的社区论坛平台，是全球市场占有率第一的社区论坛（BBS）软件。</p>
-<p>Discuz ! 官方站：<a href="http://www.discuz.net/forum-10-1.html" target="_blank" rel="noopener">http://www.discuz.net/forum-10-1.html</a> </p>
-</blockquote>
-<h2 id="详细步骤："><a href="#详细步骤：" class="headerlink" title="详细步骤："></a>详细步骤：</h2><h3 id="1）配置腾讯云服务器"><a href="#1）配置腾讯云服务器" class="headerlink" title="1）配置腾讯云服务器"></a>1）配置腾讯云服务器</h3><blockquote>
-<ol>
-<li><p>购置域名和云服务器</p>
-<p>​    </p>
-<p>用自己的微信号登入腾讯云官网（<a href="https://cloud.tencent.com/），选择左上角云产品中的云服务器，新建云服务器（如图）；" target="_blank" rel="noopener">https://cloud.tencent.com/），选择左上角云产品中的云服务器，新建云服务器（如图）；</a></p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a789a43a5.png" alt="1539352833349.png" title="1539352833349.png"></p>
-<hr>
-<p>进去后就是云服务器的配置界面了，地域、机型的话按自己需要选择，关键在于选择操作系统为<strong>CentOS  7.2 64位</strong>。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a7bf147e5.png" alt="1539353052321.png" title="1539353052321.png"></p>
-<hr>
-<p>订单完成后就是下图中的状态了。主机密码的话腾讯云会通过站内信的方式发给我们，请注意网站右上角消息，并记得及时修改初始密码）</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a7e28af42.png" alt="1539353208721.png" title="1539353208721.png"></p>
-<hr>
-<p>接下来我们讲注册域名。选择左上角中的云产品的域名注册，进入我的域名管理界面如下</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a80442247.png" alt="1539353436760.png" title="1539353436760.png"></p>
-<hr>
-<p>点击注册域名，在查询框里输入选择自己需要的域名及后缀，查询未被他人占用后加入购物车立即购买即可</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a822d9bcf.png" alt="1539353702890.png" title="1539353702890.png"></p>
-<hr>
-<p>例如本人的域名（已备案）</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a840ae9a3.png" alt="1539353761344.png" title="1539353761344.png"></p>
-<hr>
-<p>注意：众所周知的因素，在腾讯云注册的新域名烦请走下备案流程，具体流程请移步参考腾讯云官方的备案文档（人家已经为你省了很多步骤了）</p>
-<p><a href="https://cloud.tencent.com/document/product/243" target="_blank" rel="noopener">https://cloud.tencent.com/document/product/243</a></p>
-</li>
-<li><p>映射域名和云服务器</p>
-<p>​    </p>
-<p>点击云产品中的云解析进入云解析后台，进入右下边“操作”下的“解析”</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a8766e1cc.png" alt="1539356370101.png" title="1539356370101.png"></p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a89eaa7aa.png" alt="1539356521977.png" title="1539356521977.png"></p>
-<hr>
-<p>添加记录，分别用鼠标点击不同的输入框下方会出现相应说明。自己多体验——</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a8d180720.png" alt="1539356695756.png" title="1539356695756.png"></p>
-<hr>
-<p>对于我们目前讲到的这个实例来说，我们选择记录类型为A，在记录值中输入自己云服务器的公网IP（在云服务器控制台可查）</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a90065f39.png" alt="1539357062935.png" title="1539357062935.png"></p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a91a9dec1.png" alt="1539357011006.png" title="1539357011006.png"></p>
-<hr>
-<p>设置好了后，保存即可。</p>
-</li>
-</ol>
-<p>   就这样，云服务器和域名的映射就设置好了——</p>
-</blockquote>
-<hr>
-<h3 id="2）Xshell远程连接服务器"><a href="#2）Xshell远程连接服务器" class="headerlink" title="2）Xshell远程连接服务器"></a>2）Xshell远程连接服务器</h3><blockquote>
-<p>​    登录云服务器的话，可以直接在腾讯云官网的云服务器后台里登录（如图），不过我们这里采用的是另外一种方法，使用专业远程控制软件Xshell来协助远程登录。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a94693e80.png" alt="1539357779494.png" title="1539357779494.png"></p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a983c27a6.png" alt="1539357880701.png" title="1539357880701.png"></p>
-</blockquote>
-<blockquote>
-<hr>
-<p>1.到官网下载Xshell 6 软件</p>
-<p>在浏览框里输入以下链接：<a href="https://www.netsarang.com/products/xsh_overview.html" target="_blank" rel="noopener">https://www.netsarang.com/products/xsh_overview.html</a> 进入Xshell的官方下载界面</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a9a68c6ad.png" alt="1539440950942.png" title="1539440950942.png"></p>
-<hr>
-<p>点击download后进入版本选择界面，选择家庭/学校用途版本,随便填写一些信息及重要的电子邮件地址，提交就行。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a9c054eaa.png" alt="1539441010102.png" title="1539441010102.png"></p>
-<hr>
-<p>​    之后便会有邮件发至电子邮箱，点击里面的链接 </p>
-<p>​    即可下载。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38a9e4b1150.png" alt="1539441240936.png" title="1539441240936.png"></p>
-<hr>
-<p>2.安装Xshell 6 </p>
-<p>双击下载完成的exe文件，进行安装</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38aa069ae0b.png" alt="1539442812495.png" title="1539442812495.png"></p>
-<hr>
-<p>安装界面，点下一步，同意条款，下一步，随便输入名字公司信息，安装到C盘外，确定安装，进度条跑完即可 </p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38aa25af089.png" alt="1539443197084.png" title="1539443197084.png"></p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38aa479064e.png" alt="1539443248146.png" title="1539443248146.png"></p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38aa6aeab30.png" alt="1539443286639.png" title="1539443286639.png"></p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38aa84c72a2.png" alt="1539443365470.png" title="1539443365470.png"></p>
-<hr>
-<p>3.Xshell连接远程服务器</p>
-<p>运行Xshell, 初始界面如下</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38aaa406125.png" alt="1539615814983.png" title="1539615814983.png"></p>
-<hr>
-<p>点菜单栏文件— 新建，出现新建会话弹窗。在主机输入框中输入自己的云服务器分配的公网IP，其他设置不变，点击“连接”</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38aabf7d795.png" alt="1539616198499.png" title="1539616198499.png"></p>
-<hr>
-<p>之后会出现SSH安全警告，如果是在自己的电脑上操作的话，“接受并保存”即可。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38ac86ce8b7.jpg" alt="1539616297332.jpg" title="1539616297332.jpg"></p>
-<hr>
-<p>输入登录用户名（默认为root)</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38ab011b479.png" alt="1539616367172.png" title="1539616367172.png"></p>
-<hr>
-<p>接下来输入主机密码</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38ab23dffb2.png" alt="1539616544527.png" title="1539616544527.png"></p>
-<hr>
-<p>登录成功！ &lt;(￣ˇ￣)/）</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38b059823bb.jpg" alt="1539616844526.jpg" title="1539616844526.jpg"></p>
-<hr>
-<p>这样，本地与远程云服务器的连接就完成了！</p>
-<p>(^o^)/~</p>
-</blockquote>
-<hr>
-<h3 id="3）借助Docker向服务器安装脚本"><a href="#3）借助Docker向服务器安装脚本" class="headerlink" title="3）借助Docker向服务器安装脚本"></a>3）借助Docker向服务器安装脚本</h3><blockquote>
-<p>1.连接成功后，在命令行界面输入以下脚本命令</p>
-<p>curl -sSL <a href="http://www.xinghuankj.com/docker/script/xinghuan-V1.6.sh" target="_blank" rel="noopener">http://www.xinghuankj.com/docker/script/xinghuan-V1.6.sh</a> | bash</p>
-<p>按回车就可以开始安装用Docker封装好的Kodexplorer脚本了.</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38acc3ca254.png" alt="1539627239350.png" title="1539627239350.png"></p>
-<hr>
-<p>2.当命令行界面出现“请修改需要访问网站的电脑或者主机的hosts文件，将以下内容加入hosts文件”提示的时候，即宣告安装完成了。我们移步到浏览器那里去折腾。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38ace5a82d2.png" alt="1539627697904.png" title="1539627697904.png"></p>
-<hr>
-</blockquote>
-<hr>
-<h3 id="4）浏览器操作Kodexplorer"><a href="#4）浏览器操作Kodexplorer" class="headerlink" title="4）浏览器操作Kodexplorer"></a>4）浏览器操作Kodexplorer</h3><blockquote>
-<p> 1.浏览器地址栏里输入主机IP（也可输入已配置好的域名），访问Kodexplorer，初始界面如下，需要我们设置管理员账号</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38ad131d7e4.png" alt="1539627757821.png" title="1539627757821.png"></p>
-<hr>
-<p> 2.设置完毕点登录，会跳转到Kodexplorer登录界面，用我们刚才的管理员账号直接登录</p>
-<p> （PS: 可能会出现Kodexplorer版本更新弹窗，按照指示操作就行）</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38ad37a1d3d.png" alt="1539627797489.png" title="1539627797489.png"></p>
-<hr>
-<p> 3.登录成功后的界面如下，可以注意到右上边有个提示告诉我们文件仅为只读状态。我们需要移步到Xshell中获取Kodexplorer的文件读写权限。</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38ad530a864.png" alt="1539627933216.png" title="1539627933216.png"></p>
-<hr>
-<p> 4.在Xshell的命令行界面输入以下命令</p>
-<p> chmod -R 777 /webser/</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38ad7121732.png" alt="1539628008064.png" title="1539628008064.png"></p>
-<hr>
-<p> 5.回到浏览器中，点刷新，就会发现右上边的提示符号消失了，我们成功地获取了文件读写权限</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38ad9633344.png" alt="1539629018926.png" title="1539629018926.png"></p>
-<hr>
-<p> 折腾到这儿，一个直接在浏览器跑的的图形化Web网站管理后台就基本有了雏形了。接下来，我们就借助这个平台，上传DiscuzX！压缩包，做建站准备。</p>
-</blockquote>
-<hr>
-<h3 id="5）创建DiscuzX网站资源管理后台"><a href="#5）创建DiscuzX网站资源管理后台" class="headerlink" title="5）创建DiscuzX网站资源管理后台"></a>5）创建DiscuzX网站资源管理后台</h3><blockquote>
-<p> 1.前往DiscuzX！的官方代码托管站点下载代码压缩包。网址是 <a href="https://gitee.com/ComsenzDiscuz/DiscuzX" target="_blank" rel="noopener">https://gitee.com/ComsenzDiscuz/DiscuzX</a> 界面如下：</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38adbd9f297.png" alt="1542481517619.png" title="1542481517619.png"></p>
-<hr>
-<p> 2.点击上图箭头所指示的“克隆/下载”按钮，下载zip压缩包到本地。（什么验证码之类的就照人家提示做就行了——）</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38addf3f0b5.png" alt="1542481977323.png" title="1542481977323.png"></p>
-<hr>
-<p> 3.跳转回先前的kodexplorer管理后台，进入到/webser/www/对应的文件夹目录下面，上传DiscuzX压缩包。</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38adfc42e51.png" alt="1542482296406.png" title="1542482296406.png"></p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38ae135a06e.png" alt="1542482355809.png" title="1542482355809.png"></p>
-<hr>
-<p> 4.操作完成界面如下，接着就双击zip包解压缩，将子文件夹upload右键解压到当前目录。</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38ae38ee0a8.png" alt="1542482555141.png" title="1542482555141.png"></p>
-<hr>
-<p> 5.将upload重命名为dz。（0.o   看自己想法了）  接下来前往/webser/compose/nginx/conf.d/目录下。</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38ae528ef09.png" alt="1542483128118.png" title="1542483128118.png"></p>
-<hr>
-<p> 6.右键kod.conf-更多-创建副本，并将副本重命名为dz.conf，然后打开dz.conf, </p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38ae698c08e.png" alt="1542483393558.png" title="1542483393558.png"></p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38ae8ce7963.png" alt="1542483825857.png" title="1542483825857.png"></p>
-<hr>
-<p> 7.改写root字段的内容为 /webser/www/dz,   server_name字段改为example.lesliewong.cn. (读者请填写自己对应服务器映射的域名)</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38aec710ac6.png" alt="1542484287768.png" title="1542484287768.png"></p>
-<hr>
-<p> 8.同时还要修改同一目录下的kod.conf文件，修改内容如图所标（域名请自觉对应），作用是使这个域名映射到DiscuzX站点的管理后台。（依旧是这个kodexplorer资源管理器）</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38aeecc8287.png" alt="1542600360615.png" title="1542600360615.png"></p>
-<hr>
-<p> 9.OK，做完这些之后马上就要大功告成了！ 接下来我们转移到 Xshell6命令行界面上，输入下面一行命令重启nginx服务器。 </p>
-<p> docker restart nginx </p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38af18ea729.png" alt="1542599669959.png" title="1542599669959.png"></p>
-<hr>
-<p> 10.转到浏览器网址栏输入刚才的dz文件夹域名example.lesliewong.cn. 铛铛~铛铛！DiscuzX的配置页面出现了！</p>
-<hr>
-<p> <img src="https://i.loli.net/2019/01/11/5c38af39b8808.png" alt="1542600619767.png" title="1542600619767.png"></p>
-<hr>
-</blockquote>
-<hr>
-<h3 id="6）连接数据库对接DiscuzX站点"><a href="#6）连接数据库对接DiscuzX站点" class="headerlink" title="6）连接数据库对接DiscuzX站点"></a>6）连接数据库对接DiscuzX站点</h3><blockquote>
-<p>1.照着页面上的提示按钮，我同意——（开始安装）下一步——（设置运行环境：全新）下一步，就到了         创建数据库页面，如下。在此我们需要打住一下，回到我们的腾讯云主机管理页面。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38af5f6bc63.png" alt="1542602776485.png" title="1542602776485.png"></p>
-<hr>
-<p>2.来到腾讯云主机管理页面，如下图，复制主机对应的内网IP，然后填写到上面的DiscuzX表单上的数据库服务器字段（去掉localhost）。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38af8397193.png" alt="1543301253211.png" title="1543301253211.png"></p>
-<hr>
-<p>3.接着我们需要到Kodexplorer界面去获取数据库密码，如下图。打开/webser/README.MD, 弹出的文件里面有写数据库密码，将其复制下来，同样拷贝到上面的DiscuzX表单中。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38af9c3939b.png" alt="1543303448584.png" title="1543303448584.png"></p>
-<hr>
-<p>4.完成上面的步骤后，再补充表单中其他的信息，就是下面这个样子了。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38afb4c265e.png" alt="1543307987994.png" title="1543307987994.png"></p>
-<hr>
-<p>5.万事俱备，只欠东风。OK！点击“下一步”。进度条跑完就是下面这个页面了——</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38afd575f2d.png" alt="1543308134838.png" title="1543308134838.png"></p>
-<hr>
-<p>6.点击右下角的“您的论坛已完成安装，点此访问”即可访问我们的目标站点，DiscuzX 论坛原始界面。至于后面的怎样论坛定制化，大家就去DiscuzX的官方论坛看一些优秀的教程吧！有很多开源的应用可以使用。</p>
-<hr>
-<p><img src="https://i.loli.net/2019/01/11/5c38aff2d430a.png" alt="1543308358551.png" title="1543308358551.png"></p>
-<hr>
-<p>​    ~ o(<em>￣▽￣</em>)ブ</p>
-</blockquote>
-<hr>
-<h2 id="尾语"><a href="#尾语" class="headerlink" title="尾语"></a>尾语</h2><blockquote>
-<hr>
-<p>教程到这里，建站流程就走完了，感谢各位耐心看到这里&lt;(￣ˇ￣)/</p>
-<p>通过这个教程，我们接触到了kodexplorer，一款很好用的直接在浏览器跑的图形化资源管理器，xshell 6， Linux机器远程控制软件，以及云的知识~~， 当然也少不了我们关注的主角——DiscuzX论坛。</p>
-<p>相信在未来的发展中，各位依旧可以发现这些工具对自己起到很大的帮助。</p>
-<p>共勉   ~&lt;(￣︶￣)↗</p>
-<hr>
-</blockquote>
-<hr>
-<h6 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h6><blockquote>
-<p><a href="http://api.xinghuankj.com/" target="_blank" rel="noopener">http://api.xinghuankj.com/</a></p>
-<p><a href="https://kodcloud.com/help/show-1.html" target="_blank" rel="noopener">https://kodcloud.com/help/show-1.html</a></p>
-<p><a href="https://www.youtube.com/watch?v=IN7FrJopIIM" target="_blank" rel="noopener">https://www.youtube.com/watch?v=IN7FrJopIIM</a></p>
-<p><a href="http://www.docker.org.cn/book/docker/what-is-docker-16.html" target="_blank" rel="noopener">http://www.docker.org.cn/book/docker/what-is-docker-16.html</a></p>
-</blockquote>
-<p><img src="https://i.loli.net/2019/01/11/5c38b0cc1aa7d.jpg" alt="4.cow.jpg" title="4.cow.jpg"></p>
+<p>可是位于书中第226页的例子代码中（如上）却出现了不太符合这种逻辑的情况。用伪元素法生成的红色三角形是相对position属性为absolute的figcaption（即弹出文字框）作移动，而不是相对position属性为relative的祖先元素figure。</p>
+<p>自己目前还是不太明白，是因为出现了hove的缘故？亦或 原先的定位上下文的规则不太适用于伪元素？</p>
+<p>依旧求解中。</p>
+<hr>
+<p>(2018.9.15更新)</p>
+<p>对于这个问题的答案，自己姑且只能采取经验总结的方式了，总结认为伪元素::before和::after创建后position设置为absolute其位置移动属性是相对于设置自己的最近元素的。</p>
+<p>参考了MDN文档中对::after和::before的解释，其中::before解释中出现了与此情况类似的代码。</p>
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Buy milk<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Take the dog for a walk<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Exercise<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Write code<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Play music<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span>Relax<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">li</span> &#123;</span><br><span class="line">  <span class="attribute">list-style-type</span>: none;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">2px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0.5em</span> <span class="number">0.5em</span> <span class="number">0.5em</span> <span class="number">2em</span>;</span><br><span class="line">  <span class="attribute">background</span>: lightgrey;</span><br><span class="line">  <span class="attribute">font-family</span>: sans-serif;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-class">.done</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#CCFF99</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">li</span><span class="selector-class">.done</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">border-color</span>: <span class="number">#009933</span>;</span><br><span class="line">  <span class="attribute">border-style</span>: solid;</span><br><span class="line">  <span class="attribute">border-width</span>: <span class="number">0</span> <span class="number">0.3em</span> <span class="number">0.25em</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">1.3em</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0.6em</span>;</span><br><span class="line">  <span class="attribute">margin-top</span>: -<span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0.5em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> list = <span class="built_in">document</span>.querySelector(<span class="string">'ul'</span>);</span><br><span class="line">list.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">ev</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>( ev.target.tagName === <span class="string">'LI'</span>) &#123;</span><br><span class="line">     ev.target.classList.toggle(<span class="string">'done'</span>); </span><br><span class="line">  &#125;</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><hr>
+<p>点击前:</p>
+<p><img src="https://i.loli.net/2019/01/11/5c38a36b92892.jpg" alt="2.jpg" title="2.jpg"></p>
+<p>点击后:</p>
+<p><img src="https://i.loli.net/2019/01/11/5c38a36b92e11.jpg" alt="3.jpg" title="3.jpg"></p>
+<hr>
+<p>可以看到这个例子代码也给before伪元素设置了移动属性top和left,然而——–，可是——，   它的父元素 li 是堂堂正正地设置为position:relative; 的吖。。。</p>
+<p>目前看来也只能总结成自己的踩坑经验了，给定位上下文这个知识点补充一些例外。</p>
+<hr>
+<p><img src="https://i.loli.net/2019/01/11/5c38a36b93476.jpg" alt="1.grizzlyBear.jpg" title="1.grizzlyBear.jpg"></p>
 
       
 
@@ -555,10 +256,6 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
         		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">建站</a>
-        		</li>
       		
 		</ul>
 	</div>
@@ -570,10 +267,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端/建站//" class="article-tag-list-link color3">建站</a>
         		</li>
       		
 		</ul>
@@ -628,7 +321,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://lesliewong.cn/2018/11/28/How+to+build+a+discuz+forum+using+Docker+and+Kodexplorer/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://lesliewong.cn/2018/09/10/A-doubt-about-the-pseudo-element-in-CSS/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -644,20 +337,15 @@
   
 <nav id="article-nav">
   
-    <a href="../../../12/14/How+to+print+c+document+in+elegant+format/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="../../../10/25/A-C-algorithm-to-solve-the-Joseph-Ring-problem/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          如何用优雅的格式打印C语言代码？
+          约瑟夫环问题的C语言算法实现
         
       </div>
     </a>
   
-  
-    <a href="../../03/A+C+algorithm+with+linked+list+to+express+addition+subtraction+multiplication+differential+of+polynomial/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">一元多项式的加法、减法、乘法和微分运算的C语言链表结构算法实现</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -682,7 +370,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#工具-原料"><span class="toc-number">1.</span> <span class="toc-text">工具/原料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识科普"><span class="toc-number">2.</span> <span class="toc-text">知识科普</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#详细步骤："><span class="toc-number">3.</span> <span class="toc-text">详细步骤：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1）配置腾讯云服务器"><span class="toc-number">3.1.</span> <span class="toc-text">1）配置腾讯云服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2）Xshell远程连接服务器"><span class="toc-number">3.2.</span> <span class="toc-text">2）Xshell远程连接服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3）借助Docker向服务器安装脚本"><span class="toc-number">3.3.</span> <span class="toc-text">3）借助Docker向服务器安装脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4）浏览器操作Kodexplorer"><span class="toc-number">3.4.</span> <span class="toc-text">4）浏览器操作Kodexplorer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5）创建DiscuzX网站资源管理后台"><span class="toc-number">3.5.</span> <span class="toc-text">5）创建DiscuzX网站资源管理后台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6）连接数据库对接DiscuzX站点"><span class="toc-number">3.6.</span> <span class="toc-text">6）连接数据库对接DiscuzX站点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#尾语"><span class="toc-number">4.</span> <span class="toc-text">尾语</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#参考文献"><span class="toc-number">4.0.0.0.1.</span> <span class="toc-text">参考文献</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#源代码"><span class="toc-number">1.</span> <span class="toc-text">源代码</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML"><span class="toc-number"></span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS"><span class="toc-number"></span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript"><span class="toc-number"></span> <span class="toc-text">JavaScript</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#运行结果"><span class="toc-number"></span> <span class="toc-text">运行结果</span></a>
                     </div>
                 </span>
             </div>
@@ -700,10 +388,10 @@
 	<!-- 引入光速通行证css代码 -->
 		<link rel="stylesheet" href="//c.fansx.com/tc.css"/>
 	<!-- 评论框 start --> 
-		<div id="tc_s23p2018112815337"></div>
+		<div id="tc_s23p201891080812"></div>
 	<!-- 评论框 end -->
 	<!-- 光速公共JS代码 start (一个网页只需插入一次) -->
-		<script src="//c.fansx.com/?m=c1&sid=23&pid=2018112815337"></script>
+		<script src="//c.fansx.com/?m=c1&sid=23&pid=201891080812"></script>
 	<!-- 光速公共JS代码 end -->
 </div>
 
@@ -813,7 +501,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">建站</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -821,7 +509,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">建站</a>
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
