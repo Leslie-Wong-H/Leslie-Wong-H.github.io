@@ -16,8 +16,8 @@
 <meta property="og:site_name" content="马树菌的博客驿站">
 <meta property="og:description" content="​    在2011年的时候，浙大的一位博士生借助微博的开放平台为他实验室的一台饮水机弄了个微博，名唤@浙大CCNT实验室饮水机，俗称“饮水机娘“。当年自己对这条新闻留下了挺深的印象，也一直对这个微博账号可以自动发微博背后的机理感到十分憧憬。一晃，时间都来到了2019年了~~ ​    咳咳——在钻研不少技术文章以及对技术派网友的多多请教后，自己终于也捣弄了一个自动发微博的机器人(￣︶￣)↗">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006vCcQDgy1g13zken7kgj30qn0l50xq.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006vCcQDgy1g13zj5qy1sj30yh0cndh8.jpg">
+<meta property="og:image" content="https://i.loli.net/2020/02/24/krqDmobZeLJWPcd.png">
+<meta property="og:image" content="https://i.loli.net/2020/02/24/9NVwazCH2PJmTjO.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/15/5c8bafa625e44.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/15/5c8bafa6303d1.png">
 <meta property="og:image" content="https://i.loli.net/2019/03/15/5c8bafa643929.png">
@@ -25,12 +25,12 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006vCcQDgy1g13zv01ugzj30a801aa9v.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006vCcQDgy1g13zwlg4urj30bo0120sn.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/15/5c8bafa6379fe.png">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006vCcQDgy1g13zkrqbgaj30i70hxtd5.jpg">
-<meta property="og:updated_time" content="2019-03-22T17:00:05.538Z">
+<meta property="og:image" content="https://i.loli.net/2020/02/24/rNU7HBf4RAEtDJw.png">
+<meta property="og:updated_time" content="2020-02-23T23:19:07.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="借助诗词API和微博图床搭建自动发图文微博机器人">
 <meta name="twitter:description" content="​    在2011年的时候，浙大的一位博士生借助微博的开放平台为他实验室的一台饮水机弄了个微博，名唤@浙大CCNT实验室饮水机，俗称“饮水机娘“。当年自己对这条新闻留下了挺深的印象，也一直对这个微博账号可以自动发微博背后的机理感到十分憧憬。一晃，时间都来到了2019年了~~ ​    咳咳——在钻研不少技术文章以及对技术派网友的多多请教后，自己终于也捣弄了一个自动发微博的机器人(￣︶￣)↗">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006vCcQDgy1g13zken7kgj30qn0l50xq.jpg">
+<meta name="twitter:image" content="https://i.loli.net/2020/02/24/krqDmobZeLJWPcd.png">
   
     <link rel="alternative" href="/atom.xml" title="马树菌的博客驿站" type="application/atom+xml">
   
@@ -248,7 +248,7 @@ var _hmt = _hmt || [];
 </ul>
 <hr>
 <p>​    实际效果图：</p>
-<p><img src="https://ws1.sinaimg.cn/large/006vCcQDgy1g13zken7kgj30qn0l50xq.jpg" alt="">    </p>
+<p><img src="https://i.loli.net/2020/02/24/krqDmobZeLJWPcd.png" alt="image.png"></p>
 <p>​    GitHub仓库：</p>
 <blockquote>
 <p><a href="https://github.com/Leslie-Wong-H/weiboPoemBot" target="_blank" rel="noopener">https://github.com/Leslie-Wong-H/weiboPoemBot</a></p>
@@ -260,7 +260,7 @@ var _hmt = _hmt || [];
 <p>发送微博的功能通过代码实现，利用了新浪微博开放平台提供的PHP语言软件开发工具包。在代码的设计中，主要有检测模块和反应模块两部分。检测模块处理摄像头的监控数据，捕捉加热指示灯“亮-&gt;不亮”与“不亮-&gt;亮”两个切换状态，然后调用反应模块及时发送微博。所以在“饮水机娘”自动发送的微博下方，会显示“来自未通过审核应用”。目前，完成这些功能，所需的代码量不足两百行。</p>
 </blockquote>
 <p>​    现在来分析分析这两段话，把整个流程弄成流程图的话是如下的效果：</p>
-<p><img src="https://ws1.sinaimg.cn/large/006vCcQDgy1g13zj5qy1sj30yh0cndh8.jpg" alt=""></p>
+<p><img src="https://i.loli.net/2020/02/24/9NVwazCH2PJmTjO.png" alt="image.png"> </p>
 <p>​    从“指示灯”到“视觉算法判断状态”这部分属于计算机视觉实现了，依本人目前的技术视野判断，可以借助openCV来构建。至于发送微博这一部分，则是纯粹的PHP代码实现。由于本文所要讨论的是构建一个发微博的机器人，而微博报文数据的获取可以有很多种方式，因此，openCV就点到为止了。（自己也不是太懂openCV）(。・_・)/~~~</p>
 <p>​    自己在查阅了不少技术文献后，通过这篇<a href="https://www.cnblogs.com/chasewade/p/3408086.html" target="_blank" rel="noopener">《新浪微博自动（模拟）登陆详解及实现》</a>了解到饮水机娘发送的微博下方会出现“来自未通过审核应用”是由于用了新浪微博开放平台的接口的缘故，而且其会有几个比较致命的限制（调用次数限制和授权期限限制）。网上流传一种直接模拟登陆微博的解决方案，关键点就是利用php的curl功能，这也是本人所要阐述的微博机器人使用的登录原理。</p>
 <p>​    另外，翻了翻饮水机娘最早期发送的微博，报告饮水机水沸腾了的微博报文是这样子的——</p>
@@ -329,7 +329,7 @@ var _hmt = _hmt || [];
 <p><a href="https://www.yuluoge.com/" target="_blank" rel="noopener">九凌少子</a></p>
 </blockquote>
 <hr>
-<p><img src="https://ws1.sinaimg.cn/large/006vCcQDgy1g13zkrqbgaj30i70hxtd5.jpg" alt=""></p>
+<p><img src="https://i.loli.net/2020/02/24/rNU7HBf4RAEtDJw.png" alt="image.png"></p>
 
       
 
@@ -609,7 +609,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">维护</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -617,23 +621,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">主题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -645,15 +637,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">维护</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">主题</a>
               </li>
             
             <div class="clearfix"></div>
