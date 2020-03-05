@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://lesliewong.cn">
   <title>借助诗词API和微博图床搭建自动发图文微博机器人 | 马树菌的博客驿站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -72,7 +72,7 @@ var _hmt = _hmt || [];
 
 
 </head>
-
+</html>
 <!-- <body style="background: url(https://i.loli.net/2019/05/28/5ced114aa07ac64901.jpg) bottom right / cover;background-attachment:fixed"> -->
   <body>
   <div id="container" q-class="show:isCtnShow" >
@@ -136,7 +136,7 @@ var _hmt = _hmt || [];
 		        
 					<a class="github" target="_blank" href="https://github.com/Leslie-Wong-H" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="linkedin" target="_blank" href="http://www.linkedin.com/in/leslie-wong-683122152/" title="linkedin"><i class="icon-linkedin"></i></a>
+					<a class="linkedin" target="_blank" href="https://www.linkedin.com/in/leslie-wong-en/" title="linkedin"><i class="icon-linkedin"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:79917148leslie@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -185,7 +185,7 @@ var _hmt = _hmt || [];
 			        
 						<a class="github" target="_blank" href="https://github.com/Leslie-Wong-H" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="linkedin" target="_blank" href="http://www.linkedin.com/in/leslie-wong-683122152/" title="linkedin"><i class="icon-linkedin"></i></a>
+						<a class="linkedin" target="_blank" href="https://www.linkedin.com/in/leslie-wong-en/" title="linkedin"><i class="icon-linkedin"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:79917148leslie@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -266,9 +266,9 @@ var _hmt = _hmt || [];
 <p>​    另外，翻了翻饮水机娘最早期发送的微博，报告饮水机水沸腾了的微博报文是这样子的——</p>
 <p><img src="https://i.loli.net/2019/03/15/5c8bafa625e44.png" alt="1552649398204"></p>
 <p>​    后来变成了这样子——</p>
-<p><img src="https://i.loli.net/2019/03/15/5c8bafa6303d1.png" alt=""></p>
+<p><img src="https://i.loli.net/2019/03/15/5c8bafa6303d1.png" alt></p>
 <p>​    而对应“亮-&gt;不亮”状态的微博报文最初是这样子的——</p>
-<p><img src="https://i.loli.net/2019/03/15/5c8bafa643929.png" alt=""></p>
+<p><img src="https://i.loli.net/2019/03/15/5c8bafa643929.png" alt></p>
 <p>​    不过，后来关注度上去之后，就很难判断饮水机娘发送的微博是不是根据饮水机状态自动发出去了的了，但是也不影响本文后续的叙述。OK，溯源的部分就到这里，接下来讲讲在机器人构建中占据不少分量的数据获取API——今日诗词API、文艺主题图片API、微博图床API。</p>
 <h2 id="今日诗词API"><a href="#今日诗词API" class="headerlink" title="今日诗词API"></a>今日诗词API</h2><p>​    今日诗词API是<a href="https://luan.ma" target="_blank" rel="noopener">乱码</a>开发的一个可以返回一句古诗词名句的接口。它可以通过图片和JSON格式调用。今日诗词API根据不同地点、时间、节日、季节、天气、景观、城市、事件进行智能推荐。</p>
 <p>​    官方文档地址是<a href="https://www.jinrishici.com/，" target="_blank" rel="noopener">https://www.jinrishici.com/，</a> 乱码大佬撰写的介绍文章则是<a href="https://luan.ma/post/jinrishici/。就本人所要构建的微博机器人而言，使用到的接口是" target="_blank" rel="noopener">https://luan.ma/post/jinrishici/。就本人所要构建的微博机器人而言，使用到的接口是</a><a href="https://v2.jinrishici.com/one.json" target="_blank" rel="noopener">https://v2.jinrishici.com/one.json</a>，而且是使用带token的调用方式。</p>
@@ -314,7 +314,7 @@ var _hmt = _hmt || [];
 <li>保存退出后，重启crontab服务。<img src="https://segmentfault.com/img/remote/1460000018525173?w=420&amp;h=38/view" alt="preview"></li>
 </ol>
 <p><strong>语法解释：</strong></p>
-<p><img src="https://i.loli.net/2019/03/15/5c8bafa6379fe.png" alt=""></p>
+<p><img src="https://i.loli.net/2019/03/15/5c8bafa6379fe.png" alt></p>
 <p>“*” 代表取值范围内的数字,<br>“/” 代表”每”,<br>“-” 代表从某个数字到某个数字,<br>“,” 分开几个离散的数字</p>
 <h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><blockquote>
 <p><a href="https://www.guokr.com/article/81621/" target="_blank" rel="noopener">《揭开“饮水机娘”的神秘面纱》</a></p>
@@ -609,7 +609,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
+                <a href="javascript:void(0)" class="js-tag color3">维护</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -625,11 +625,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">维护</a>
+                <a href="javascript:void(0)" class="js-tag color3">主题</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">主题</a>
+                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
               </li>
              
               <li class="article-tag-list-item">
