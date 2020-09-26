@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://lesliewong.cn">
-  <title>Archives: 2018 | 马树菌的博客驿站</title>
+  <title>JavaScript专项算法题（5）：面向对象 | 马树菌的博客驿站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="赛博朋克世界万岁~\(≧▽≦)/~">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马树菌的博客驿站">
-<meta property="og:url" content="http://lesliewong.cn/archives/2018/index.html">
+  <meta name="description" content="＠冒泡的马树 题库原地址：http://csbin.io/oop 面向对象">
+<meta name="keywords" content="JavaScript,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript专项算法题（5）：面向对象">
+<meta property="og:url" content="http://lesliewong.cn/2020/09/26/JavaScript-functional-algorithms-OOP/index.html">
 <meta property="og:site_name" content="马树菌的博客驿站">
-<meta property="og:description" content="赛博朋克世界万岁~\(≧▽≦)/~">
+<meta property="og:description" content="＠冒泡的马树 题库原地址：http://csbin.io/oop 面向对象">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://i.loli.net/2020/09/26/zbDdyV9sMRBngfT.jpg">
+<meta property="og:updated_time" content="2020-09-26T12:58:00.444Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马树菌的博客驿站">
-<meta name="twitter:description" content="赛博朋克世界万岁~\(≧▽≦)/~">
+<meta name="twitter:title" content="JavaScript专项算法题（5）：面向对象">
+<meta name="twitter:description" content="＠冒泡的马树 题库原地址：http://csbin.io/oop 面向对象">
+<meta name="twitter:image" content="https://i.loli.net/2020/09/26/zbDdyV9sMRBngfT.jpg">
   
     <link rel="alternative" href="/atom.xml" title="马树菌的博客驿站" type="application/atom+xml">
   
@@ -92,9 +96,9 @@ var _hmt = _hmt || [];
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="../../index.html">主页</a></li>
+				<li><a href="../../../../index.html">主页</a></li>
 	        
-				<li><a href="../../music/music.html">音乐</a></li>
+				<li><a href="../../../../music/music.html">音乐</a></li>
 	        
 				<li><a href="https://playgameoflife.live">GOL</a></li>
 	        
@@ -187,9 +191,9 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="../../index.html">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="../../../../index.html">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="../../music/music.html">音乐</a></li>
+					<li style="width: 33.333333333333336%"><a href="../../../../music/music.html">音乐</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="https://playgameoflife.live">GOL</a></li>
 		        
@@ -206,146 +210,114 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaScript-functional-algorithms-OOP" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript专项算法题（5）：面向对象
+    </h1>
+  
+
+        
+        <a href="" class="archive-article-date">
+  	<time datetime="2020-09-26T12:45:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-26</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>＠冒泡的马树</p>
+<p>题库原地址：<a href="http://csbin.io/oop" target="_blank" rel="noopener">http://csbin.io/oop</a></p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><a id="more"></a> 
+<h3 id="使用实义化的对象"><a href="#使用实义化的对象" class="headerlink" title="使用实义化的对象"></a>使用实义化的对象</h3><h4 id="挑战1-1"><a href="#挑战1-1" class="headerlink" title="挑战1/1"></a>挑战1/1</h4><p><strong>问题:</strong></p>
+<p>构建一个称为<em>makePerson</em>的接受两个参数（name和age）的函数，返回一个对象。此函数会：</p>
+<ol>
+<li>创建一个空对象；</li>
+<li>给空对象一个键名为<em>name</em>的属性，键值为输入函数的name参数的值；</li>
+<li>给空对象一个键名为age的属性，键值为输入函数的age参数的值；</li>
+<li>返回对象。</li>
+</ol>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/****************************************************************</span></span><br><span class="line"><span class="comment">                  WORKING WITH OBJECT LITERALS</span></span><br><span class="line"><span class="comment">****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*** CHALLENGE 1 of 1 ***/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">makePerson</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// add code here</span></span><br><span class="line">  <span class="keyword">const</span> innerObj = &#123;&#125;;</span><br><span class="line">  innerObj[<span class="string">"name"</span>] = name;</span><br><span class="line">  innerObj[<span class="string">"age"</span>] = age;</span><br><span class="line">  <span class="keyword">return</span> innerObj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> vicky = makePerson(<span class="string">"Vicky"</span>, <span class="number">24</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/********* Uncomment these lines to test your work! *********/</span></span><br><span class="line"><span class="built_in">console</span>.log(vicky.name); <span class="comment">// -&gt; Logs 'Vicky'</span></span><br><span class="line"><span class="built_in">console</span>.log(vicky.age); <span class="comment">// -&gt; Logs 24</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用Object-create"><a href="#使用Object-create" class="headerlink" title="使用Object.create"></a>使用Object.create</h3><h4 id="挑战1-3"><a href="#挑战1-3" class="headerlink" title="挑战1/3"></a>挑战1/3</h4><p><strong>问题：</strong></p>
+<p>在personStore对象内，创建greet属性，其值为一个打印“hello”的函数。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/****************************************************************</span></span><br><span class="line"><span class="comment">                       USING OBJECT.CREATE</span></span><br><span class="line"><span class="comment">****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*** CHALLENGE 1 of 3 ***/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> personStore = &#123;</span><br><span class="line">  <span class="comment">// add code here</span></span><br><span class="line">  greet: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/********* Uncomment this line to test your work! *********/</span></span><br><span class="line">personStore.greet(); <span class="comment">// -&gt; Logs 'hello'</span></span><br></pre></td></tr></table></figure>
+<h4 id="挑战2-3"><a href="#挑战2-3" class="headerlink" title="挑战2/3"></a>挑战2/3</h4><p><strong>问题：</strong></p>
+<p>构建personFromPersonStore函数，接受的参数为name和age。当被调用时，此函数会被通过Object.create方法在personStore对象上创建person对象。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*** CHALLENGE 2 of 3 ***/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">personFromPersonStore</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// add code here</span></span><br><span class="line">  <span class="keyword">const</span> innerObj = <span class="built_in">Object</span>.create(personStore);</span><br><span class="line">  innerObj[<span class="string">"name"</span>] = name;</span><br><span class="line">  innerObj[<span class="string">"age"</span>] = age;</span><br><span class="line">  <span class="keyword">return</span> innerObj;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> sandra = personFromPersonStore(<span class="string">"Sandra"</span>, <span class="number">26</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// /********* Uncomment these lines to test your work! *********/</span></span><br><span class="line"><span class="built_in">console</span>.log(sandra.name); <span class="comment">// -&gt; Logs 'Sandra'</span></span><br><span class="line"><span class="built_in">console</span>.log(sandra.age); <span class="comment">//-&gt; Logs 26</span></span><br><span class="line">sandra.greet(); <span class="comment">//-&gt; Logs 'hello'</span></span><br></pre></td></tr></table></figure>
+<h4 id="挑战3-3"><a href="#挑战3-3" class="headerlink" title="挑战3/3"></a>挑战3/3</h4><p><strong>问题：</strong></p>
+<p>在不改变上述已写代码的情况下，给personStore对象添加一个用于打印“Hi，my name is [name]”的introduce方法。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*** CHALLENGE 3 of 3 ***/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// add code here</span></span><br><span class="line">personStore[<span class="string">"introduce"</span>] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Hi, my name is <span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">sandra.introduce(); <span class="comment">// -&gt; Logs 'Hi, my name is Sandra'</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用”new“关键词"><a href="#使用”new“关键词" class="headerlink" title="使用”new“关键词"></a>使用”new“关键词</h3><h4 id="挑战1-3-1"><a href="#挑战1-3-1" class="headerlink" title="挑战1/3"></a>挑战1/3</h4><p><strong>问题：</strong></p>
+<p>构建PersonConstructor函数。其利用“this”关键词来保存属性到greet作用域上。greet应该是一个打印“hello”字符串的函数。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/****************************************************************</span></span><br><span class="line"><span class="comment">                    USING THE 'NEW' KEYWORD</span></span><br><span class="line"><span class="comment">****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*** CHALLENGE 1 of 3 ***/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">PersonConstructor</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// add code here</span></span><br><span class="line">  <span class="keyword">this</span>.greet = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// /********* Uncomment this line to test your work! *********/</span></span><br><span class="line"><span class="keyword">const</span> simon = <span class="keyword">new</span> PersonConstructor();</span><br><span class="line">simon.greet(); <span class="comment">// -&gt; Logs 'hello'</span></span><br></pre></td></tr></table></figure>
+<h4 id="挑战2-3-1"><a href="#挑战2-3-1" class="headerlink" title="挑战2/3"></a>挑战2/3</h4><p><strong>问题：</strong></p>
+<p>构建personFromConstructor函数，接受参数为name和age。当被调用时，此函数会使用“new”关键词来创建person对象而不是Object.create方法。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*** CHALLENGE 2 of 3 ***/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">personFromConstructor</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// add code here</span></span><br><span class="line">  <span class="keyword">const</span> innerPerson = <span class="keyword">new</span> PersonConstructor();</span><br><span class="line">  innerPerson.name = name;</span><br><span class="line">  innerPerson.age = age;</span><br><span class="line">  <span class="keyword">return</span> innerPerson;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mike = personFromConstructor(<span class="string">"Mike"</span>, <span class="number">30</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/********* Uncomment these lines to test your work! *********/</span></span><br><span class="line"><span class="built_in">console</span>.log(mike.name); <span class="comment">// -&gt; Logs 'Mike'</span></span><br><span class="line"><span class="built_in">console</span>.log(mike.age); <span class="comment">//-&gt; Logs 30</span></span><br><span class="line">mike.greet(); <span class="comment">//-&gt; Logs 'hello'</span></span><br></pre></td></tr></table></figure>
+<h4 id="挑战3-3-1"><a href="#挑战3-3-1" class="headerlink" title="挑战3/3"></a>挑战3/3</h4><p><strong>问题：</strong></p>
+<p>在不改变上述已写代码的情况下，给PersonConstructor函数添加一个打印“Hi, my name is [name]”的introduce方法。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*** CHALLENGE 3 of 3 ***/</span></span><br><span class="line"><span class="comment">// add code here</span></span><br><span class="line">PersonConstructor.prototype.introduce = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">`Hi, my name is <span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">mike.introduce(); <span class="comment">// -&gt; Logs 'Hi, my name is Mike'</span></span><br></pre></td></tr></table></figure>
+<h3 id="使用ES6的类"><a href="#使用ES6的类" class="headerlink" title="使用ES6的类"></a>使用ES6的类</h3><h4 id="挑战1-2"><a href="#挑战1-2" class="headerlink" title="挑战1/2"></a>挑战1/2</h4><p><strong>问题：</strong></p>
+<p>构建PersonClass类。PersonClass应有一个接受name参数并存储为名为name的属性的构造器。PersonClass还应有一个称为greet的方法，用于打印“hello”字符串。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/****************************************************************</span></span><br><span class="line"><span class="comment">                        USING ES6 CLASSES</span></span><br><span class="line"><span class="comment">****************************************************************/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*** CHALLENGE 1 of 2 ***/</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">PersonClass</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(name) &#123;</span><br><span class="line">    <span class="comment">// add code here</span></span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// add code here</span></span><br><span class="line">  greet() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// /********* Uncomment this line to test your work! *********/</span></span><br><span class="line"><span class="keyword">const</span> george = <span class="keyword">new</span> PersonClass(<span class="string">''</span>);</span><br><span class="line">george.greet(); <span class="comment">// -&gt; Logs 'hello'</span></span><br></pre></td></tr></table></figure>
+<h4 id="挑战2-2"><a href="#挑战2-2" class="headerlink" title="挑战2/2"></a>挑战2/2</h4><p><strong>问题：</strong></p>
+<p>构建DeveloperClass类。DeveloperClass类通过扩展PersonClass类来构造对象。除拥有name属性和greet方法外，DeveloperClass还应有个introduce方法。当被调用时，introduce方法会打印“Hello World, my name is [name]”.</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*** CHALLENGE 2 of 2 ***/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// add code here</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DeveloperClass</span> <span class="keyword">extends</span> <span class="title">PersonClass</span> </span>&#123;</span><br><span class="line">  introduce() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`Hello World, my name is <span class="subst">$&#123;<span class="keyword">this</span>.name&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/********* Uncomment these lines to test your work! *********/</span></span><br><span class="line"><span class="keyword">const</span> thai = <span class="keyword">new</span> DeveloperClass(<span class="string">"Thai"</span>, <span class="number">32</span>);</span><br><span class="line"><span class="built_in">console</span>.log(thai.name); <span class="comment">// -&gt; Logs 'Thai'</span></span><br><span class="line">thai.introduce(); <span class="comment">//-&gt; Logs 'Hello World, my name is Thai'</span></span><br></pre></td></tr></table></figure>
+<h3 id="拓展：子类"><a href="#拓展：子类" class="headerlink" title="拓展：子类"></a>拓展：子类</h3><h4 id="挑战1-5"><a href="#挑战1-5" class="headerlink" title="挑战1/5"></a>挑战1/5</h4><p><strong>问题：</strong></p>
+<p>构建adminFunctionStore对象，其可以访问userFunctionStore的所有方法，在不将方法逐个于自身内复制的情况下。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> userFunctionStore = &#123;</span><br><span class="line">  sayType: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"I am a "</span> + <span class="keyword">this</span>.type);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> adminFunctionStore = <span class="built_in">Object</span>.create(userFunctionStore);</span><br></pre></td></tr></table></figure>
+<h4 id="挑战2-5"><a href="#挑战2-5" class="headerlink" title="挑战2/5"></a>挑战2/5</h4><p><strong>问题：</strong></p>
+<p>构建adminFactory函数，用于创建一个包含userFactory下所有数据域及默认值的对象，在不将数据域逐个于自身内复制的情况下。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">userFactory</span>(<span class="params">name, score</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> user = <span class="built_in">Object</span>.create(userFunctionStore);</span><br><span class="line">  user.type = <span class="string">"User"</span>;</span><br><span class="line">  user.name = name;</span><br><span class="line">  user.score = score;</span><br><span class="line">  <span class="keyword">return</span> user;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">adminFactory</span>(<span class="params">name, score</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> admin = <span class="keyword">new</span> userFactory(name, score);</span><br><span class="line">    <span class="keyword">return</span> admin;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="挑战3-5"><a href="#挑战3-5" class="headerlink" title="挑战3/5"></a>挑战3/5</h4><p><strong>问题：</strong></p>
+<p>然后确保adminFactory中的type‘域的值为’Admin‘而不是’User’。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">adminFactory</span>(<span class="params">name, score</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> admin = <span class="keyword">new</span> userFactory(name, score);</span><br><span class="line">    admin.type = <span class="string">'Admin'</span>;</span><br><span class="line">    <span class="keyword">return</span> admin;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="挑战4-5"><a href="#挑战4-5" class="headerlink" title="挑战4/5"></a>挑战4/5</h4><p><strong>问题：</strong></p>
+<p>确保adminFactory对象可以访问到adminFunctionStore对象中的方法，在不全部复制的情况下。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">adminFactory</span>(<span class="params">name, score</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> admin = <span class="built_in">Object</span>.create(adminFunctionStore, &#123;</span><br><span class="line">    name: &#123;</span><br><span class="line">      value: name,</span><br><span class="line">    &#125;,</span><br><span class="line">    score: &#123;</span><br><span class="line">      value: score,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">  admin.type = <span class="string">"Admin"</span>;</span><br><span class="line">  <span class="keyword">return</span> admin;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="挑战5-5"><a href="#挑战5-5" class="headerlink" title="挑战5/5"></a>挑战5/5</h4><p><strong>问题：</strong></p>
+<p>创建一个打印“Welcome users!”的sharePublicMessage方法，适用于adminFactory对象，但不适用于userFactory对象。请不要在adminFactory中直接添加这个方法。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> adminFunctionStore = <span class="built_in">Object</span>.create(userFunctionStore, &#123;</span><br><span class="line">  sharePublicMessage: &#123;</span><br><span class="line">    value: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"Welcome users!"</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> adminTester = <span class="keyword">new</span> adminFactory(<span class="string">"Mike"</span>, <span class="number">89</span>);</span><br><span class="line">adminTester.sharePublicMessage(); <span class="comment">// -&gt; "Welcom users!"</span></span><br><span class="line"><span class="built_in">console</span>.log(adminTester.type);  <span class="comment">// -&gt; "Admin"</span></span><br><span class="line"><span class="keyword">const</span> userTester = <span class="keyword">new</span> userFactory(<span class="string">"June"</span>, <span class="number">90</span>);</span><br><span class="line"><span class="comment">// userTester.sharePublisMessage();  // -&gt; error!</span></span><br><span class="line"><span class="built_in">console</span>.log(userTester.type); <span class="comment">// -&gt; "User"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> adminFromFactory = adminFactory(<span class="string">"Eva"</span>, <span class="number">5</span>);</span><br><span class="line">adminFromFactory.sayType(); <span class="comment">// -&gt; Logs "I am a Admin"</span></span><br><span class="line">adminFromFactory.sharePublicMessage(); <span class="comment">// -&gt; Logs "Welcome users!"</span></span><br></pre></td></tr></table></figure>
+<h3 id="拓展：Mixins"><a href="#拓展：Mixins" class="headerlink" title="拓展：Mixins"></a>拓展：Mixins</h3><p><strong>问题：</strong></p>
+<p>Mixins是面向对象编程中使对象获得除继承外的方法和属性的工具。在这个挑战中，补充下方代码，使robotFido拥有robotMixin的所有属性。请仅适用一行代码，在不逐个添加属性的情况下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.legs = <span class="number">4</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  speak() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Woof!'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> robotMixin = &#123;</span><br><span class="line">  skin: <span class="string">'metal'</span>,</span><br><span class="line">  speak: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(<span class="string">`I have <span class="subst">$&#123;<span class="keyword">this</span>.legs&#125;</span> legs and am made of <span class="subst">$&#123;<span class="keyword">this</span>.skin&#125;</span>`</span>) &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> robotFido = <span class="keyword">new</span> Dog();</span><br></pre></td></tr></table></figure>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">robotFido = <span class="built_in">Object</span>.assign(robotFido, robotMixin);</span><br><span class="line"></span><br><span class="line">robotFido.speak(); <span class="comment">// -&gt; Logs "I am made of 4 legs and am made of metal"</span></span><br></pre></td></tr></table></figure>
+<hr>
+<p><img src="https://i.loli.net/2020/09/26/zbDdyV9sMRBngfT.jpg" alt></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="../../2018/12/14/How-to-print-c-document-in-elegant-format/" class="archive-article-date">
-  	<time datetime="2018-12-13T17:53:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="../../2018/12/14/How-to-print-c-document-in-elegant-format/">如何用优雅的格式打印C语言代码？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/技巧//" class="article-tag-list-link color3">技巧</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="../../2018/11/28/How-to-build-a-discuz-forum-using-Docker-and-Kodexplorer/" class="archive-article-date">
-  	<time datetime="2018-11-27T17:53:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="../../2018/11/28/How-to-build-a-discuz-forum-using-Docker-and-Kodexplorer/">借助Docker和Kodexplorer实现简易化部署Discuz类论坛网站</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">建站</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端/建站//" class="article-tag-list-link color3">建站</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="../../2018/11/03/A-C-algorithm-with-linked-list-to-express-addition-subtraction-multiplication-differential-of-polynomial/" class="archive-article-date">
-  	<time datetime="2018-11-03T12:45:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="../../2018/11/03/A-C-algorithm-with-linked-list-to-express-addition-subtraction-multiplication-differential-of-polynomial/">一元多项式的加法、减法、乘法和微分运算的C语言链表结构算法实现</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
@@ -353,128 +325,151 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript/算法//" class="article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
   </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="../../2018/10/25/A-C-algorithm-to-solve-the-Joseph-Ring-problem/" class="archive-article-date">
-  	<time datetime="2018-10-25T11:35:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="../../2018/10/25/A-C-algorithm-to-solve-the-Joseph-Ring-problem/">约瑟夫环问题的C语言算法实现</a>
-    </h1>
-  
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://lesliewong.cn/2020/09/26/JavaScript-functional-algorithms-OOP/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
+  <div>
 </article>
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="../../2018/09/10/A-doubt-about-the-pseudo-element-in-CSS/" class="archive-article-date">
-  	<time datetime="2018-09-10T12:08:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="../../../08/15/JavaScript-functional-algorithms-async/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript专项算法题（4）：异步</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="../../2018/09/10/A-doubt-about-the-pseudo-element-in-CSS/">CSS中伪元素的定位上下文问题</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/前端//" class="article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#面向对象"><span class="toc-number">1.</span> <span class="toc-text">面向对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用实义化的对象"><span class="toc-number">1.1.</span> <span class="toc-text">使用实义化的对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战1-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">挑战1/1</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用Object-create"><span class="toc-number">1.2.</span> <span class="toc-text">使用Object.create</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战1-3"><span class="toc-number">1.2.1.</span> <span class="toc-text">挑战1/3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战2-3"><span class="toc-number">1.2.2.</span> <span class="toc-text">挑战2/3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战3-3"><span class="toc-number">1.2.3.</span> <span class="toc-text">挑战3/3</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用”new“关键词"><span class="toc-number">1.3.</span> <span class="toc-text">使用”new“关键词</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战1-3-1"><span class="toc-number">1.3.1.</span> <span class="toc-text">挑战1/3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战2-3-1"><span class="toc-number">1.3.2.</span> <span class="toc-text">挑战2/3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战3-3-1"><span class="toc-number">1.3.3.</span> <span class="toc-text">挑战3/3</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用ES6的类"><span class="toc-number">1.4.</span> <span class="toc-text">使用ES6的类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战1-2"><span class="toc-number">1.4.1.</span> <span class="toc-text">挑战1/2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战2-2"><span class="toc-number">1.4.2.</span> <span class="toc-text">挑战2/2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拓展：子类"><span class="toc-number">1.5.</span> <span class="toc-text">拓展：子类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战1-5"><span class="toc-number">1.5.1.</span> <span class="toc-text">挑战1/5</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战2-5"><span class="toc-number">1.5.2.</span> <span class="toc-text">挑战2/5</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战3-5"><span class="toc-number">1.5.3.</span> <span class="toc-text">挑战3/5</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战4-5"><span class="toc-number">1.5.4.</span> <span class="toc-text">挑战4/5</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#挑战5-5"><span class="toc-number">1.5.5.</span> <span class="toc-text">挑战5/5</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拓展：Mixins"><span class="toc-number">1.6.</span> <span class="toc-text">拓展：Mixins</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper">
+	<!-- 引入光速通行证css代码 -->
+		<link rel="stylesheet" href="//c.fansx.com/tc.css"/>
+	<!-- 评论框 start --> 
+		<div id="tc_s23p202092684530"></div>
+	<!-- 评论框 end -->
+	<!-- 光速公共JS代码 start (一个网页只需插入一次) -->
+		<script src="//c.fansx.com/?m=c1&sid=23&pid=202092684530"></script>
+	<!-- 光速公共JS代码 end -->
+</div>
+
+
   
 
     
+
+  
+
+  
+
+  
 
 
           </div>
@@ -535,8 +530,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
