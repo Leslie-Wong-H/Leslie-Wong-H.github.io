@@ -17,7 +17,7 @@
 <meta property="og:description" content="＠冒泡的马树 题库原地址：http://csbin.io/async 异步挑战一问题: 思考时间（现在暂时不需要编写代码）：分析下方挑战一的代码，打印出来的结果会是怎样顺序的？Howdy先还是Partnah先？">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://i.loli.net/2020/08/10/gFjX7Kcd38WhCMH.jpg">
-<meta property="og:updated_time" content="2020-08-15T10:06:52.649Z">
+<meta property="og:updated_time" content="2021-01-27T14:42:11.875Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript专项算法题（4）：异步">
 <meta name="twitter:description" content="＠冒泡的马树 题库原地址：http://csbin.io/async 异步挑战一问题: 思考时间（现在暂时不需要编写代码）：分析下方挑战一的代码，打印出来的结果会是怎样顺序的？Howdy先还是Partnah先？">
@@ -266,7 +266,7 @@ var _hmt = _hmt || [];
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* CHALLENGE 6 */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">everyXsecsForYsecs</span>(<span class="params">func, interval, duration</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ADD CODE HERE</span></span><br><span class="line">  <span class="keyword">const</span> intervalId = setInterval(func, interval * <span class="number">1000</span>);</span><br><span class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> clearInterval(intervalId), duration * <span class="number">1000</span>);</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Uncomment the following lines to check your work!</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">theEnd</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'This is the end!'</span>);</span><br><span class="line">&#125;</span><br><span class="line">everyXsecsForYsecs(theEnd, <span class="number">2</span>, <span class="number">20</span>); <span class="comment">// should invoke theEnd function every 2 seconds, for 20 seconds): This is the end!</span></span><br></pre></td></tr></table></figure>
 <h3 id="挑战七"><a href="#挑战七" class="headerlink" title="挑战七"></a>挑战七</h3><p><strong>问题：</strong></p>
 <p>构建delayCounter函数，接受的第一个参数为一个数组（称为target），第二个参数为毫秒单位的数字（称为wait)，返回结果为一个函数。</p>
-<p>当返回函数被调用时，它会以依序打印从1到target之间的数字（含target），以wait毫秒的时间间隔。</p>
+<p>当返回函数被调用时，它会依序打印从1到target之间的数字（含target），以wait毫秒的时间间隔。</p>
 <p><strong>题解：</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* CHALLENGE 7 */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delayCounter</span>(<span class="params">target, wait</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Solution 1:</span></span><br><span class="line">	<span class="keyword">let</span> intervalId;</span><br><span class="line">	<span class="keyword">let</span> counter = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">inner</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (counter === <span class="number">0</span>) &#123;</span><br><span class="line">        counter++;</span><br><span class="line">        intervalId = setInterval(<span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">console</span>.log(inner()), wait);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (counter === target) &#123;</span><br><span class="line">        clearInterval(intervalId);</span><br><span class="line">        <span class="keyword">return</span> counter;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> counter++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">  	<span class="comment">// Solution 2:</span></span><br><span class="line">    <span class="comment">//return function inner() &#123;</span></span><br><span class="line">    <span class="comment">//	for(let i = 1; i&lt;=target; i++)&#123;</span></span><br><span class="line">    <span class="comment">//  setTimeout(()=&gt;console.log(i), wait * i);</span></span><br><span class="line">    <span class="comment">//	&#125;</span></span><br><span class="line">	<span class="comment">//&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// UNCOMMENT THESE TO TEST YOUR WORK!</span></span><br><span class="line"><span class="comment">// const countLogger = delayCounter(3, 1000)</span></span><br><span class="line"><span class="comment">// countLogger();</span></span><br><span class="line"><span class="comment">// After 1 second, log 1</span></span><br><span class="line"><span class="comment">// After 2 seconds, log 2</span></span><br><span class="line"><span class="comment">// After 3 seconds, log 3</span></span><br></pre></td></tr></table></figure>
 <h3 id="挑战八"><a href="#挑战八" class="headerlink" title="挑战八"></a>挑战八</h3><p><strong>问题：</strong></p>
@@ -604,7 +604,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color3">维护</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">建站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">主题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -613,6 +633,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微博</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -632,43 +664,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">建站</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微博</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">游戏</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">维护</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">主题</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">服务器</a>
+                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
               </li>
             
             <div class="clearfix"></div>
