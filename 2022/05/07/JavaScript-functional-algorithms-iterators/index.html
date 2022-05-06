@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://lesliewong.cn">
-  <title>Category: 科学计算 | 马树菌的博客驿站</title>
+  <title>JavaScript专项算法题（7）：Iterators迭代器 | 马树菌的博客驿站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="赛博朋克世界万岁~\(≧▽≦)/~">
-<meta property="og:type" content="website">
-<meta property="og:title" content="马树菌的博客驿站">
-<meta property="og:url" content="http://lesliewong.cn/categories/Python/科学计算/index.html">
+  <meta name="description" content="＠冒泡的马树 题库原地址：http://csbin.io/iterators Iterators迭代器">
+<meta name="keywords" content="JavaScript,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript专项算法题（7）：Iterators迭代器">
+<meta property="og:url" content="http://lesliewong.cn/2022/05/07/JavaScript-functional-algorithms-iterators/index.html">
 <meta property="og:site_name" content="马树菌的博客驿站">
-<meta property="og:description" content="赛博朋克世界万岁~\(≧▽≦)/~">
+<meta property="og:description" content="＠冒泡的马树 题库原地址：http://csbin.io/iterators Iterators迭代器">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://s2.loli.net/2022/05/06/tkb7NoIfSLwWAqV.jpg">
+<meta property="og:updated_time" content="2022-05-06T19:49:31.313Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马树菌的博客驿站">
-<meta name="twitter:description" content="赛博朋克世界万岁~\(≧▽≦)/~">
+<meta name="twitter:title" content="JavaScript专项算法题（7）：Iterators迭代器">
+<meta name="twitter:description" content="＠冒泡的马树 题库原地址：http://csbin.io/iterators Iterators迭代器">
+<meta name="twitter:image" content="https://s2.loli.net/2022/05/06/tkb7NoIfSLwWAqV.jpg">
   
     <link rel="alternative" href="/atom.xml" title="马树菌的博客驿站" type="application/atom+xml">
   
@@ -92,9 +96,9 @@ var _hmt = _hmt || [];
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="../../../index.html">主页</a></li>
+				<li><a href="../../../../index.html">主页</a></li>
 	        
-				<li><a href="../../../music/music.html">音乐</a></li>
+				<li><a href="../../../../music/music.html">音乐</a></li>
 	        
 				<li><a href="https://playgameoflife.live">GOL</a></li>
 	        
@@ -191,9 +195,9 @@ var _hmt = _hmt || [];
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="../../../index.html">主页</a></li>
+					<li style="width: 25%"><a href="../../../../index.html">主页</a></li>
 		        
-					<li style="width: 25%"><a href="../../../music/music.html">音乐</a></li>
+					<li style="width: 25%"><a href="../../../../music/music.html">音乐</a></li>
 		        
 					<li style="width: 25%"><a href="https://playgameoflife.live">GOL</a></li>
 		        
@@ -212,162 +216,241 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JavaScript-functional-algorithms-iterators" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="../../../archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="../../../2022/01/15/google-highway-advertisement-first-10-digit-prime-found-in-consecutive-digits-of-e/" class="archive-article-date">
-  	<time datetime="2022-01-15T15:45:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="../../../2022/01/15/google-highway-advertisement-first-10-digit-prime-found-in-consecutive-digits-of-e/">谷歌高速公路招聘广告：{ 无理数e中前十位连续的素数 }.com</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript专项算法题（7）：Iterators迭代器
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="" class="archive-article-date">
+  	<time datetime="2022-05-07T15:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>＠冒泡的马树</p>
+<p>题库原地址：<a href="http://csbin.io/iterators" target="_blank" rel="noopener">http://csbin.io/iterators</a></p>
+<h2 id="Iterators迭代器"><a href="#Iterators迭代器" class="headerlink" title="Iterators迭代器"></a>Iterators迭代器</h2><a id="more"></a>
+<h3 id="挑战1"><a href="#挑战1" class="headerlink" title="挑战1"></a>挑战1</h3><p><strong>问题：</strong></p>
+<p>A) 创建一个for循环，用于遍历数组，返回数组的所有元素的总和。</p>
+<p>B) 创建一个函数式迭代器，调用时遍历传入的数组的每一个元素，每次一个元素。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CHALLENGE 1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sumFunc</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// YOUR CODE HERE</span></span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">    sum += arr[i]</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Uncomment the lines below to test your work</span></span><br><span class="line"><span class="keyword">const</span> array = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="built_in">console</span>.log(sumFunc(array)); <span class="comment">// -&gt; should log 10</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">returnIterator</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// YOUR CODE HERE</span></span><br><span class="line">  <span class="keyword">let</span> i = <span class="number">0</span></span><br><span class="line">  <span class="keyword">const</span> inner = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> element = arr[i]</span><br><span class="line">    i++</span><br><span class="line">    <span class="keyword">return</span> element</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> inner</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Uncomment the lines below to test your work</span></span><br><span class="line"><span class="keyword">const</span> array2 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>];</span><br><span class="line"><span class="keyword">const</span> myIterator = returnIterator(array2);</span><br><span class="line"><span class="built_in">console</span>.log(myIterator()); <span class="comment">// -&gt; should log 'a'</span></span><br><span class="line"><span class="built_in">console</span>.log(myIterator()); <span class="comment">// -&gt; should log 'b'</span></span><br><span class="line"><span class="built_in">console</span>.log(myIterator()); <span class="comment">// -&gt; should log 'c'</span></span><br><span class="line"><span class="built_in">console</span>.log(myIterator()); <span class="comment">// -&gt; should log 'd'</span></span><br></pre></td></tr></table></figure>
+<h3 id="挑战2"><a href="#挑战2" class="headerlink" title="挑战2"></a>挑战2</h3><p><strong>问题：</strong></p>
+<p>创建一个附有next方法的迭代器。当.next被调用时，此迭代器会逐个返回数组内的元素。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CHALLENGE 2</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">nextIterator</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// YOUR CODE HERE</span></span><br><span class="line">  <span class="keyword">let</span> i = <span class="number">0</span></span><br><span class="line">  <span class="keyword">const</span> inner = &#123;</span><br><span class="line">    next: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> element = arr[i]</span><br><span class="line">      i++</span><br><span class="line">      <span class="keyword">return</span> element</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> inner</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Uncomment the lines below to test your work</span></span><br><span class="line"><span class="keyword">const</span> array3 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> iteratorWithNext = nextIterator(array3);</span><br><span class="line"><span class="built_in">console</span>.log(iteratorWithNext.next()); <span class="comment">// -&gt; should log 1</span></span><br><span class="line"><span class="built_in">console</span>.log(iteratorWithNext.next()); <span class="comment">// -&gt; should log 2</span></span><br><span class="line"><span class="built_in">console</span>.log(iteratorWithNext.next()); <span class="comment">// -&gt; should log 3</span></span><br></pre></td></tr></table></figure>
+<h3 id="挑战3"><a href="#挑战3" class="headerlink" title="挑战3"></a>挑战3</h3><p><strong>问题：</strong></p>
+<p>编写代码，使用上方的nextIterator函数遍历一整个数组，然后求和。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CHALLENGE 3</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sumArray</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// YOUR CODE HERE</span></span><br><span class="line">  <span class="comment">// use your nextIterator function</span></span><br><span class="line">  <span class="keyword">const</span> iteratorWithNext = nextIterator(arr)</span><br><span class="line">  <span class="keyword">let</span> sum = <span class="number">0</span></span><br><span class="line">  <span class="keyword">let</span> item </span><br><span class="line">  <span class="keyword">while</span>(item = iteratorWithNext.next()) &#123;</span><br><span class="line">    sum += item</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Uncomment the lines below to test your work</span></span><br><span class="line"><span class="keyword">const</span> array4 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="built_in">console</span>.log(sumArray(array4)); <span class="comment">// -&gt; should log 10</span></span><br></pre></td></tr></table></figure>
+<h3 id="挑战4"><a href="#挑战4" class="headerlink" title="挑战4"></a>挑战4</h3><p><strong>问题：</strong></p>
+<p>创建一个附有next方法的迭代器。当调用.next时，它会返回传入的set集合的每一个元素。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CHALLENGE 4</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setIterator</span>(<span class="params">set</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// YOUR CODE HERE</span></span><br><span class="line">  <span class="comment">// Solution One:</span></span><br><span class="line">  <span class="comment">// let i = 0</span></span><br><span class="line">  <span class="comment">// const arr = [...set]</span></span><br><span class="line">  <span class="comment">// return &#123;</span></span><br><span class="line">  <span class="comment">//   next: () =&gt; arr[i++]</span></span><br><span class="line">  <span class="comment">// &#125;</span></span><br><span class="line">  <span class="comment">// Solution Two:</span></span><br><span class="line">  <span class="keyword">const</span> newSet = set[<span class="built_in">Symbol</span>.iterator]()</span><br><span class="line">  <span class="keyword">return</span> &#123;<span class="attr">next</span>: <span class="function"><span class="params">()</span> =&gt;</span> newSet.next().value&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Uncomment the lines below to test your work</span></span><br><span class="line"><span class="keyword">const</span> mySet = <span class="keyword">new</span> <span class="built_in">Set</span>(<span class="string">'hey'</span>);</span><br><span class="line"><span class="keyword">const</span> iterateSet = setIterator(mySet);</span><br><span class="line"><span class="built_in">console</span>.log(iterateSet.next()); <span class="comment">// -&gt; should log 'h'</span></span><br><span class="line"><span class="built_in">console</span>.log(iterateSet.next()); <span class="comment">// -&gt; should log 'e'</span></span><br><span class="line"><span class="built_in">console</span>.log(iterateSet.next()); <span class="comment">// -&gt; should log 'y'</span></span><br></pre></td></tr></table></figure>
+<h3 id="挑战5"><a href="#挑战5" class="headerlink" title="挑战5"></a>挑战5</h3><p><strong>问题：</strong></p>
+<p>创建一个附有next方法的迭代器。当调用.next时，它会返回带有两个元素的数组（第一个为下标，第二个为下标对应的数组元素）。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CHALLENGE 5</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">indexIterator</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// YOUR CODE HERE</span></span><br><span class="line">  <span class="keyword">let</span> i = <span class="number">0</span></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    next: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> element = arr[i]</span><br><span class="line">      <span class="keyword">const</span> index = i</span><br><span class="line">      i++</span><br><span class="line">      <span class="keyword">return</span> [index, element]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Uncomment the lines below to test your work</span></span><br><span class="line"><span class="keyword">const</span> array5 = [<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>];</span><br><span class="line"><span class="keyword">const</span> iteratorWithIndex = indexIterator(array5);</span><br><span class="line"><span class="built_in">console</span>.log(iteratorWithIndex.next()); <span class="comment">// -&gt; should log [0, 'a']</span></span><br><span class="line"><span class="built_in">console</span>.log(iteratorWithIndex.next()); <span class="comment">// -&gt; should log [1, 'b']</span></span><br><span class="line"><span class="built_in">console</span>.log(iteratorWithIndex.next()); <span class="comment">// -&gt; should log [2, 'c']</span></span><br></pre></td></tr></table></figure>
+<h3 id="挑战6"><a href="#挑战6" class="headerlink" title="挑战6"></a>挑战6</h3><p><strong>问题：</strong></p>
+<p>创建一个迭代器。在它的.next方法被调用时，它会返回一个句子型字符串中的每一个单词。</p>
+<p>（提示：使用正则表达式！）</p>
+<p>然后将此操作当成一个方法挂载到构建函数Words的原型链上。</p>
+<p>（提示：研究Symbol.iterator！）</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CHALLENGE 6</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Words</span>(<span class="params">string</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.str = string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Words.prototype[<span class="built_in">Symbol</span>.iterator] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// YOUR CODE HERE</span></span><br><span class="line">  <span class="keyword">const</span> reg = <span class="regexp">/\w+/g</span></span><br><span class="line">  <span class="keyword">const</span> strArr = <span class="keyword">this</span>.str.match(reg)</span><br><span class="line">  <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    next: <span class="function"><span class="params">()</span> =&gt;</span> </span><br><span class="line">      (index &lt; strArr.length) ? </span><br><span class="line">        &#123; <span class="attr">done</span>: <span class="literal">false</span>, <span class="attr">value</span>: strArr[index++] &#125; :</span><br><span class="line">        &#123; <span class="attr">done</span>: <span class="literal">true</span>, <span class="attr">value</span>: <span class="literal">undefined</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Uncomment the lines below to test your work</span></span><br><span class="line"><span class="keyword">const</span> helloWorld = <span class="keyword">new</span> Words(<span class="string">'Hello World'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> word <span class="keyword">of</span> helloWorld) &#123; <span class="built_in">console</span>.log(word); &#125; <span class="comment">// -&gt; should log 'Hello' and 'World'</span></span><br></pre></td></tr></table></figure>
+<h3 id="挑战7"><a href="#挑战7" class="headerlink" title="挑战7"></a>挑战7</h3><p><strong>问题：</strong></p>
+<p>创建一个函数。此函数会遍历传入的数组，返回对应的遍历元素和字符串“was found after index x”拼接而成的字符串结果，其中的x是前一个下标。</p>
+<p>注意：对于第一个元素，它应该返回“It is the first”。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CHALLENGE 7</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">valueAndPrevIndex</span>(<span class="params">array</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">const</span> iteratedArray = array[<span class="built_in">Symbol</span>.iterator]()</span><br><span class="line">  <span class="keyword">let</span> index = <span class="number">0</span></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    sentence: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (index == <span class="number">0</span>) &#123;</span><br><span class="line">        iteratedArray.next()</span><br><span class="line">        index++</span><br><span class="line">        <span class="keyword">return</span> <span class="string">`It is the first`</span></span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> result = <span class="string">`<span class="subst">$&#123;iteratedArray.next().value&#125;</span> was found after index <span class="subst">$&#123;index - <span class="number">1</span>&#125;</span>`</span></span><br><span class="line">        index++</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> returnedSentence = valueAndPrevIndex([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])</span><br><span class="line"><span class="built_in">console</span>.log(returnedSentence.sentence());</span><br><span class="line"><span class="built_in">console</span>.log(returnedSentence.sentence());</span><br><span class="line"><span class="built_in">console</span>.log(returnedSentence.sentence());</span><br></pre></td></tr></table></figure>
+<h3 id="挑战8"><a href="#挑战8" class="headerlink" title="挑战8"></a>挑战8</h3><p><strong>问题：</strong></p>
+<p>编写一个函数。它会每三秒钟console.log打印“hello there”或“gibberish”，取决于传入函数的值是否为“english”。</p>
+<p>请勿使用任何形式的循环且请仅调用createConversation一次。</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CHALLENGE 8</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">createConversation</span>(<span class="params">string</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> output = <span class="string">''</span></span><br><span class="line">  <span class="keyword">if</span> (string === <span class="string">'english'</span>) &#123;</span><br><span class="line">    output = <span class="string">'hello there'</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    output = <span class="string">'gibberish'</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">yield</span> setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;<span class="built_in">console</span>.log(output)&#125;, <span class="number">3000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">createConversation(<span class="string">'english'</span>).next();</span><br></pre></td></tr></table></figure>
+<h3 id="挑战9"><a href="#挑战9" class="headerlink" title="挑战9"></a>挑战9</h3><p><strong>问题：</strong></p>
+<p>使用async/await来console.log打印一个由名词noun和动词verb构成的句子，其中非异步函数会接收一个名词noun，与一个硬编码的动词verb拼接，在三秒后返回给异步函数。异步函数接收到数据后，会console.log打印相应数据。异步函数仅能调用一次，传入一个名词noun见证它的执行吧！</p>
+<p><strong>题解：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//CHALLENGE 9</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">waitForVerb</span>(<span class="params">noun</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> verb = <span class="string">'barks'</span></span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> resolve(<span class="string">`<span class="subst">$&#123;noun&#125;</span> <span class="subst">$&#123;verb&#125;</span>`</span>), <span class="number">3000</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">noun</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> sentence = <span class="keyword">await</span> waitForVerb(noun)</span><br><span class="line">  <span class="built_in">console</span>.log(sentence)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(<span class="string">"dog"</span>)</span><br></pre></td></tr></table></figure>
+<hr>
+<p><img src="https://s2.loli.net/2022/05/06/tkb7NoIfSLwWAqV.jpg" alt></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">科学计算</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Scientific Computing</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Python/科学计算//" class="article-tag-list-link color5">科学计算</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Python/科学计算/Scientific-Computing//" class="article-tag-list-link color1">Scientific Computing</a>
+        			<a href="/categories/JavaScript/算法//" class="article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
   </div>
-</article>
-  
-    
-    
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://lesliewong.cn/2022/05/07/JavaScript-functional-algorithms-iterators/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="../../../archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="../../../2020/11/15/common-tech-stack-for-scientific-computing-programming/" class="archive-article-date">
-  	<time datetime="2020-11-15T12:45:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="../../../2020/11/15/common-tech-stack-for-scientific-computing-programming/">科学计算编程涉及到的技术栈简介</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">科学计算</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Scientific Computing</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Python/科学计算//" class="article-tag-list-link color5">科学计算</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Python/科学计算/Scientific-Computing//" class="article-tag-list-link color1">Scientific Computing</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      <div class="clearfix"></div>
+    </div>
   </div>
+  <div>
 </article>
+
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="../../06/JavaScript-functional-algorithms-promises/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript专项算法题（6）：Promises</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Iterators迭代器"><span class="toc-number">1.</span> <span class="toc-text">Iterators迭代器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#挑战1"><span class="toc-number">1.1.</span> <span class="toc-text">挑战1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#挑战2"><span class="toc-number">1.2.</span> <span class="toc-text">挑战2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#挑战3"><span class="toc-number">1.3.</span> <span class="toc-text">挑战3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#挑战4"><span class="toc-number">1.4.</span> <span class="toc-text">挑战4</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#挑战5"><span class="toc-number">1.5.</span> <span class="toc-text">挑战5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#挑战6"><span class="toc-number">1.6.</span> <span class="toc-text">挑战6</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#挑战7"><span class="toc-number">1.7.</span> <span class="toc-text">挑战7</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#挑战8"><span class="toc-number">1.8.</span> <span class="toc-text">挑战8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#挑战9"><span class="toc-number">1.9.</span> <span class="toc-text">挑战9</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper">
+	<!-- 引入光速通行证css代码 -->
+		<link rel="stylesheet" href="//c.fansx.com/tc.css"/>
+	<!-- 评论框 start --> 
+		<div id="tc_s23p202257110730"></div>
+	<!-- 评论框 end -->
+	<!-- 光速公共JS代码 start (一个网页只需插入一次) -->
+		<script src="//c.fansx.com/?m=c1&sid=23&pid=202257110730"></script>
+	<!-- 光速公共JS代码 end -->
+</div>
+
+
   
 
     
+
+  
+
+  
+
+  
 
 
           </div>
@@ -428,10 +511,10 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
