@@ -1,3 +1,8 @@
+.fireworks {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+}
 .clearfix:after,.clearfix:before{
 	content:"";
 	display:table
