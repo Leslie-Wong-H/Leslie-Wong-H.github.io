@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="马树菌的博客驿站">
 <meta property="og:description" content="＠冒泡的马树 题库原地址：http://csbin.io/async 异步挑战一 sayHowdy问题: 思考时间（现在暂时不需要编写代码）：分析下方挑战一的代码，打印出来的结果会是怎样顺序的？Howdy先还是Partnah先？">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://i.loli.net/2020/08/10/gFjX7Kcd38WhCMH.jpg">
-<meta property="og:updated_time" content="2021-09-28T15:50:14.424Z">
+<meta property="og:image" content="https://image-static.segmentfault.com/341/573/3415737013-79e86c0967428e01_fix732">
+<meta property="og:updated_time" content="2024-01-18T04:52:40.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript专项算法题（4）：异步">
 <meta name="twitter:description" content="＠冒泡的马树 题库原地址：http://csbin.io/async 异步挑战一 sayHowdy问题: 思考时间（现在暂时不需要编写代码）：分析下方挑战一的代码，打印出来的结果会是怎样顺序的？Howdy先还是Partnah先？">
-<meta name="twitter:image" content="https://i.loli.net/2020/08/10/gFjX7Kcd38WhCMH.jpg">
+<meta name="twitter:image" content="https://image-static.segmentfault.com/341/573/3415737013-79e86c0967428e01_fix732">
   
     <link rel="alternative" href="/atom.xml" title="马树菌的博客驿站" type="application/atom+xml">
   
@@ -298,7 +298,7 @@ var _hmt = _hmt || [];
 <p><strong>题解：</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* CHALLENGE 10 */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">callback, interval</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// ADD CODE HERE</span></span><br><span class="line">  <span class="comment">// Solution 1:</span></span><br><span class="line">  <span class="keyword">let</span> timeCounter = <span class="number">0</span></span><br><span class="line">  <span class="keyword">let</span> timeoutId = <span class="literal">null</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (timeCounter === <span class="number">0</span>) &#123;</span><br><span class="line">      timeoutId = setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;timeoutId = <span class="literal">null</span>;timeCounter = <span class="number">0</span>;&#125;, interval);</span><br><span class="line">      timeCounter++;</span><br><span class="line">      <span class="keyword">return</span> callback();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (timeoutId) &#123;</span><br><span class="line">        clearTimeout(timeoutId);</span><br><span class="line">      	timeoutId = setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;timeoutId = <span class="literal">null</span>; timeCounter = <span class="number">0</span>;&#125;, interval);</span><br><span class="line">        timeCounter++;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        timeCounter++;</span><br><span class="line">        <span class="keyword">return</span> callback();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"><span class="comment">//   // Solution 2 (Not efficient): </span></span><br><span class="line"><span class="comment">//   return function ()&#123;</span></span><br><span class="line"><span class="comment">//     if (timeoutId) &#123;</span></span><br><span class="line"><span class="comment">//       clearTimeout(timeoutId);</span></span><br><span class="line"><span class="comment">//       timeoutId = setTimeout(() =&gt; timeoutId = null, interval);</span></span><br><span class="line"><span class="comment">//     &#125; else &#123;</span></span><br><span class="line"><span class="comment">//       timeoutId = setTimeout(() =&gt; timeoutId = null, interval);</span></span><br><span class="line"><span class="comment">//       return callback();</span></span><br><span class="line">      </span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">//   &#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// UNCOMMENT THESE TO TEST YOUR WORK!</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">giveHi</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="string">'hi'</span>; &#125;</span><br><span class="line"><span class="keyword">const</span> giveHiSometimes = debounce(giveHi, <span class="number">3000</span>);</span><br><span class="line"><span class="built_in">console</span>.log(giveHiSometimes()); <span class="comment">// -&gt; 'hi'</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(giveHiSometimes()); &#125;, <span class="number">2000</span>); <span class="comment">// -&gt; undefined</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(giveHiSometimes()); &#125;, <span class="number">4000</span>); <span class="comment">// -&gt; undefined</span></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="built_in">console</span>.log(giveHiSometimes()); &#125;, <span class="number">8000</span>); <span class="comment">// -&gt; 'hi'</span></span><br></pre></td></tr></table></figure>
 <hr>
-<p><img src="https://i.loli.net/2020/08/10/gFjX7Kcd38WhCMH.jpg" alt></p>
+<p><img src="https://image-static.segmentfault.com/341/573/3415737013-79e86c0967428e01_fix732" alt></p>
 
       
 
@@ -506,7 +506,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2023 爱冒泡的马树菌
+        &copy; 2024 爱冒泡的马树菌
       </div>
       <div class="footer-left">
         <a
@@ -622,11 +622,59 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">维护</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学计算</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Scientific Computing</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">TypeScript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">建站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微博</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">维护</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -643,54 +691,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微博</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学计算</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Scientific Computing</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">TypeScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
               </li>
             
             <div class="clearfix"></div>

@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="马树菌的博客驿站">
 <meta property="og:description" content="＠冒泡的马树 题库原地址：http://csbin.io/closures 闭包、作用域和运行上下文挑战1 createFunction问题: 构建createFunction函数，用于创建和返回函数。当被创建的函数被调用时，它会打印“hello”。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://i.loli.net/2020/07/11/nvx2Fyhb39oV17D.jpg">
-<meta property="og:updated_time" content="2021-02-25T05:49:15.113Z">
+<meta property="og:image" content="https://image-static.segmentfault.com/357/720/357720668-6f0a23916687d0c6_fix732">
+<meta property="og:updated_time" content="2024-01-18T04:40:22.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript专项算法题（3）：闭包">
 <meta name="twitter:description" content="＠冒泡的马树 题库原地址：http://csbin.io/closures 闭包、作用域和运行上下文挑战1 createFunction问题: 构建createFunction函数，用于创建和返回函数。当被创建的函数被调用时，它会打印“hello”。">
-<meta name="twitter:image" content="https://i.loli.net/2020/07/11/nvx2Fyhb39oV17D.jpg">
+<meta name="twitter:image" content="https://image-static.segmentfault.com/357/720/357720668-6f0a23916687d0c6_fix732">
   
     <link rel="alternative" href="/atom.xml" title="马树菌的博客驿站" type="application/atom+xml">
   
@@ -332,7 +332,7 @@ var _hmt = _hmt || [];
 <p><strong>题解：</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// CHALLENGE 19</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">blackjack</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">const</span> dealer = <span class="function">(<span class="params">num1, num2</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> first = <span class="literal">true</span>; </span><br><span class="line">    <span class="keyword">let</span> bust = <span class="literal">false</span>; </span><br><span class="line">    <span class="keyword">let</span> sum = num1 + num2; </span><br><span class="line">    <span class="keyword">const</span> player = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span>(first) &#123;</span><br><span class="line">        first = <span class="literal">false</span>; </span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(bust) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"you are done!"</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span>(sum + array[<span class="number">0</span>] &lt;= <span class="number">21</span>)&#123;</span><br><span class="line">        sum += array.shift();</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        array.shift();</span><br><span class="line">        bust = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"bust"</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> player;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> dealer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*** Uncomment these to check your work! ***/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*** DEALER ***/</span></span><br><span class="line"><span class="keyword">const</span> deal = blackjack([<span class="number">2</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">3</span>, <span class="number">9</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">3</span>, <span class="number">10</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">6</span>, <span class="number">10</span>, <span class="number">11</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*** PLAYER 1 ***/</span></span><br><span class="line"><span class="keyword">const</span> i_like_to_live_dangerously = deal(<span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(i_like_to_live_dangerously()); <span class="comment">// =&gt; should log 9</span></span><br><span class="line"><span class="built_in">console</span>.log(i_like_to_live_dangerously()); <span class="comment">// =&gt; should log 11</span></span><br><span class="line"><span class="built_in">console</span>.log(i_like_to_live_dangerously()); <span class="comment">// =&gt; should log 17</span></span><br><span class="line"><span class="built_in">console</span>.log(i_like_to_live_dangerously()); <span class="comment">// =&gt; should log 18</span></span><br><span class="line"><span class="built_in">console</span>.log(i_like_to_live_dangerously()); <span class="comment">// =&gt; should log 'bust'</span></span><br><span class="line"><span class="built_in">console</span>.log(i_like_to_live_dangerously()); <span class="comment">// =&gt; should log 'you are done!'</span></span><br><span class="line"><span class="built_in">console</span>.log(i_like_to_live_dangerously()); <span class="comment">// =&gt; should log 'you are done!'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*** BELOW LINES ARE FOR THE BONUS ***/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*** PLAYER 2 ***/</span></span><br><span class="line"><span class="keyword">const</span> i_TOO_like_to_live_dangerously = deal(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(i_TOO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 4</span></span><br><span class="line"><span class="built_in">console</span>.log(i_TOO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 15</span></span><br><span class="line"><span class="built_in">console</span>.log(i_TOO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 19</span></span><br><span class="line"><span class="built_in">console</span>.log(i_TOO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 'bust'</span></span><br><span class="line"><span class="built_in">console</span>.log(i_TOO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 'you are done!</span></span><br><span class="line"><span class="built_in">console</span>.log(i_TOO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 'you are done!</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*** PLAYER 3 ***/</span></span><br><span class="line"><span class="keyword">const</span> i_ALSO_like_to_live_dangerously = deal(<span class="number">3</span>, <span class="number">7</span>);</span><br><span class="line"><span class="built_in">console</span>.log(i_ALSO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 10</span></span><br><span class="line"><span class="built_in">console</span>.log(i_ALSO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 13</span></span><br><span class="line"><span class="built_in">console</span>.log(i_ALSO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 'bust'</span></span><br><span class="line"><span class="built_in">console</span>.log(i_ALSO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 'you are done!</span></span><br><span class="line"><span class="built_in">console</span>.log(i_ALSO_like_to_live_dangerously()); <span class="comment">// =&gt; should log 'you are done!'</span></span><br></pre></td></tr></table></figure>
 <hr>
-<p><img src="https://i.loli.net/2020/07/11/nvx2Fyhb39oV17D.jpg" alt></p>
+<p><img src="https://image-static.segmentfault.com/357/720/357720668-6f0a23916687d0c6_fix732" alt></p>
 
       
 
@@ -540,7 +540,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2023 爱冒泡的马树菌
+        &copy; 2024 爱冒泡的马树菌
       </div>
       <div class="footer-left">
         <a
@@ -656,11 +656,59 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">维护</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学计算</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Scientific Computing</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">TypeScript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">建站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微博</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">维护</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -677,54 +725,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微博</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学计算</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Scientific Computing</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">TypeScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
               </li>
             
             <div class="clearfix"></div>

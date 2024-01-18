@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="马树菌的博客驿站">
 <meta property="og:description" content="引言我们从一个链表的构造函数开始，“cons”，它接收一个必要参数“head”及一个可选参数“tail”（相对于支持这样的实现的语言来说）。该构造函数返回一个链表的表示结构体，其中第一个元素为“head”，其余的元素被包裹在“tail“链表中。空链表的话用JavaScript中的undefined或Python中的None来表示。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://s2.loli.net/2023/02/23/avSFQ8m5zPljJxU.jpg">
-<meta property="og:updated_time" content="2023-02-24T16:51:15.878Z">
+<meta property="og:image" content="https://image-static.segmentfault.com/293/538/2935380546-63f8eed3960bf_fix732">
+<meta property="og:updated_time" content="2024-01-18T05:05:30.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法思维体操：用JavaScript和Python自己实现reduceRight和map（链表）">
 <meta name="twitter:description" content="引言我们从一个链表的构造函数开始，“cons”，它接收一个必要参数“head”及一个可选参数“tail”（相对于支持这样的实现的语言来说）。该构造函数返回一个链表的表示结构体，其中第一个元素为“head”，其余的元素被包裹在“tail“链表中。空链表的话用JavaScript中的undefined或Python中的None来表示。">
-<meta name="twitter:image" content="https://s2.loli.net/2023/02/23/avSFQ8m5zPljJxU.jpg">
+<meta name="twitter:image" content="https://image-static.segmentfault.com/293/538/2935380546-63f8eed3960bf_fix732">
   
     <link rel="alternative" href="/atom.xml" title="马树菌的博客驿站" type="application/atom+xml">
   
@@ -299,7 +299,7 @@ var _hmt = _hmt || [];
 <p>备注：Python的trampoline蹦床函数实现有些复杂，直接递归处理了。可参考文章<a href="[Tail recursion in Python, part 1: trampolines - Andrzej Pragacz](http://andrzej.pragacz.pl/blog/2018/09/python-tail-recursion-part-1-trampolines/">Tail recursion in Python, part 1: trampolines</a>)。</p>
 </blockquote>
 <h4 id="打印结果：-1"><a href="#打印结果：-1" class="headerlink" title="打印结果："></a>打印结果：</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4 should be 1 2 3 4</span><br><span class="line">2 3 4 5 should be 2 3 4 5</span><br><span class="line">26 should be 26</span><br><span class="line">fn(fn(fn(fn(accm, 1), 2), 3), 4) should be fn(fn(fn(fn(accm, 1), 2), 3), 4)</span><br><span class="line">20 should be 20</span><br><span class="line">fn(1, fn(2, fn(3, fn(4, accm)))) should be fn(1, fn(2, fn(3, fn(4, accm))))</span><br><span class="line">Below should output 4 3 2 1 each on a separate line:</span><br><span class="line">4</span><br><span class="line">3</span><br><span class="line">2</span><br><span class="line">1</span><br><span class="line">2 3 4 5 should be 2 3 4 5</span><br><span class="line">The two outputs below should be equal:</span><br><span class="line">First output:</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">Second output:</span><br><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
-<p><img src="https://s2.loli.net/2023/02/23/avSFQ8m5zPljJxU.jpg" alt></p>
+<p><img src="https://image-static.segmentfault.com/293/538/2935380546-63f8eed3960bf_fix732" alt></p>
 
       
 
@@ -515,7 +515,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2023 爱冒泡的马树菌
+        &copy; 2024 爱冒泡的马树菌
       </div>
       <div class="footer-left">
         <a
@@ -631,11 +631,59 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">维护</a>
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">科学计算</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Scientific Computing</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">TypeScript</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">建站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">微博</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">维护</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -652,54 +700,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">服务器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">微博</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PHP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学计算</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Scientific Computing</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">游戏</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">TypeScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">技巧</a>
               </li>
             
             <div class="clearfix"></div>
