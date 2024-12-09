@@ -1,0 +1,41 @@
+<h1 id="pyecharts-assets"><a href="#pyecharts-assets" class="headerlink" title="pyecharts-assets"></a>pyecharts-assets</h1><p>pyecharts-assets 提供了 <a href="https://github.com/pyecharts/pyecharts">pyecharts</a> 的静态资源文件。</p>
+<p>可通过 localhost-server 或者 notebook-server 启动本地服务。首先将项目下载到本地</p>
+<pre><code class="shell"><span class="meta">#</span><span class="bash"> 通过 git <span class="built_in">clone</span></span>
+<span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/pyecharts/pyecharts-assets.git</span>
+
+<span class="meta">#</span><span class="bash"> 或者直接下载压缩包</span>
+<span class="meta">$</span><span class="bash"> wget https://github.com/pyecharts/pyecharts-assets/archive/master.zip</span>
+</code></pre>
+<p><strong>Localhost-Server</strong></p>
+<p>启动服务器</p>
+<pre><code class="shell"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> pyecharts-assets</span>
+<span class="meta">$</span><span class="bash"> python -m http.server</span>
+</code></pre>
+<p>设置 host</p>
+<pre><code class="python"><span class="comment"># 只需要在顶部声明 CurrentConfig.ONLINE_HOST 即可</span>
+<span class="keyword">from</span> pyecharts.globals <span class="keyword">import</span> CurrentConfig
+
+CurrentConfig.ONLINE_HOST = <span class="string">"http://127.0.0.1:8000/assets/"</span>
+
+<span class="comment"># 接下来所有图形的静态资源文件都会来自刚启动的服务器</span>
+<span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Bar
+bar = Bar()
+</code></pre>
+<p><strong>Notebook-Server</strong></p>
+<p>安装扩展插件</p>
+<pre><code class="shell"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> pyecharts-assets</span>
+<span class="meta">#</span><span class="bash"> 安装并激活插件</span>
+<span class="meta">$</span><span class="bash"> jupyter nbextension install assets</span>
+<span class="meta">$</span><span class="bash"> jupyter nbextension <span class="built_in">enable</span> assets/main</span>
+</code></pre>
+<p>设置 host</p>
+<pre><code class="python"> <span class="comment"># 只需要在顶部声明 CurrentConfig.ONLINE_HOST 即可</span>
+<span class="keyword">from</span> pyecharts.globals <span class="keyword">import</span> CurrentConfig, OnlineHostType
+
+<span class="comment"># OnlineHostType.NOTEBOOK_HOST 默认值为 http://localhost:8888/nbextensions/assets/</span>
+CurrentConfig.ONLINE_HOST = OnlineHostType.NOTEBOOK_HOST
+
+<span class="comment"># 接下来所有图形的静态资源文件都会来自刚启动的服务器</span>
+<span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Bar
+bar = Bar()
+</code></pre>

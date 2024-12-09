@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head><meta name="generator" content="Hexo 3.9.0">
+		<meta charset="UTF-8">
+		<title>JSXGraph template</title>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<link href="https://cdn.jsdelivr.net/npm/jsxgraph@1.1.0/distrib/jsxgraph.css" rel="stylesheet" type="text/css">
+		<script src="https://cdn.jsdelivr.net/npm/jsxgraph@1.1.0/distrib/jsxgraphcore.js" type="text/javascript" charset="UTF-8"></script>
+	<link rel="alternate" href="atom.xml" title="马树菌的博客驿站" type="application/atom+xml">
+</head>
+	<body>
+		<div id="jxgbox" class="jxgbox" style="width: 500px; height: 200px;"></div>
+
+		<script>
+			var board = JXG.JSXGraph.initBoard("jxgbox", {
+				boundingbox: [-5, 2, 5, -2],
+			});
+
+			var p = board.create("point", [-2, 1]);
+
+			var q = board.create("point", [3, 0]);
+
+ 			var line = board.create("line",[p,q]);
+		</script>
+	</body>
+</html>
